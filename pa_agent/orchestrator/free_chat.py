@@ -32,14 +32,9 @@ def _derive_record_id(record: AnalysisRecord) -> str:
 
     Uses the same logic as ``_build_basename`` in pending_writer.py.
     """
-    from datetime import datetime, timezone
+    from pa_agent.records.pending_writer import _build_basename
 
-    ms = record.meta.timestamp_local_ms
-    dt = datetime.fromtimestamp(ms / 1000, tz=timezone.utc).astimezone()
-    ts_str = dt.strftime("%Y-%m-%d_%H-%m-%S")
-    symbol = record.meta.symbol
-    timeframe = record.meta.timeframe
-    return f"{ts_str}_{symbol}_{timeframe}"
+    return _build_basename(record)
 
 
 def _strip_reasoning(message: dict) -> dict:

@@ -1,0 +1,1865 @@
+[
+  {
+    "file": "2026-11-18_10-00-01-660_OKX_BTCUSDT.P_30m.json",
+    "meta": {
+      "timestamp_local_iso": "2026-11-18T10:00:01.660",
+      "timestamp_local_ms": 1794967201660,
+      "symbol": "OKX:BTCUSDT.P",
+      "timeframe": "30m",
+      "bar_count": 200,
+      "ai_provider": {
+        "thinking": true,
+        "reasoning_effort": "low",
+        "context_window": 2000000
+      },
+      "decision_stance": "balanced"
+    },
+    "original_model_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是趋势型交易区间且方向中性，价格处在近40棒的中间位置（收盘位置分位约0.46），既没到上沿也没到下沿。K1是强空头趋势棒、刚跌破前低和均线，短线动能偏空；而 Always In 只允许做多侧，逆着刚出现的空头动能去接刀没有结构依据。阶段一已标出区间中部、重叠两类风险形态，中部入场属于典型亏损模式，因此本轮先等待价格走到区间边缘、或出现顺多头方向的清晰信号棒后再评估。",
+      "diagnosis_confidence": 58,
+      "diagnosis_confidence_reasoning": "近40棒上下沿多次被测试、波动大但结构可读，低点逐步抬高而高点略降，是趋势型交易区间；但它与宽通道边界模糊，且长程背景是下跌后的整理，故只给中等把握。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "方向中性、价格在区间中部、K1刚跌破均线与前低，此刻无论做多还是做空都缺少结构支撑；不交易是当前最合理的决定，把握偏低但立场明确。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期：趋势型交易区间，近40棒包络63300-65422，宽约5.7倍ATR",
+        "位置：收盘距上沿约3.1倍ATR、距下沿约2.6倍ATR，处于区间中部，交易性价比最差",
+        "方向：阶段一判定中性；日内短线因K1强空头棒跌破前低而偏弱",
+        "约束：Always In 为多头（力度弱），制度上只允许评估做多侧，但当前没有顺势做多的结构锚点",
+        "风险形态：阶段一标记区间中部（middle_range）与重叠（overlap），属于典型不宜入场环境"
+      ],
+      "watch_points": [
+        "若价格回落到区间下沿一带（63300-63700）并出现止跌的多头信号棒，再评估顺多头的做多方案",
+        "第一个短线支撑是64264/64261，若收盘跌破，下一层看64153，再看63820；跌破不追空（方向中性禁止做空）",
+        "若价格反弹到64495.9-64718.5一带，注意这是阻力区，不是做空许可，按中性方向继续观望",
+        "只有出现连续3到5根同向强趋势棒突破区间边界并有跟随回踩，才重新评估趋势性机会",
+        "价格仍处区间中部时不入场；等待结构走到边缘再重新分析"
+      ],
+      "risk_assessment": "区间中部入场，上下都有空间但都不占优势，止损与目标容易被来回扫；K1刚以强空头棒跌破前低，短线还有下探惯性，此时做多属于逆短线动量接刀；做空又受方向中性、Always In 多头的制度约束。整体期望值不足，故不下单。",
+      "invalidation_condition": "无方案，不适用；若后续价格收盘跌破63300或站上65422并形成跟随，需重新分析周期定位。"
+    },
+    "current_metrics_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是趋势型交易区间且方向中性，价格处在近40棒的中间位置（收盘位置分位约0.46），既没到上沿也没到下沿。K1是强空头趋势棒、刚跌破前低和均线，短线动能偏空；而 Always In 只允许做多侧，逆着刚出现的空头动能去接刀没有结构依据。阶段一已标出区间中部、重叠两类风险形态，中部入场属于典型亏损模式，因此本轮先等待价格走到区间边缘、或出现顺多头方向的清晰信号棒后再评估。",
+      "diagnosis_confidence": 58,
+      "diagnosis_confidence_reasoning": "近40棒上下沿多次被测试、波动大但结构可读，低点逐步抬高而高点略降，是趋势型交易区间；但它与宽通道边界模糊，且长程背景是下跌后的整理，故只给中等把握。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "方向中性、价格在区间中部、K1刚跌破均线与前低，此刻无论做多还是做空都缺少结构支撑；不交易是当前最合理的决定，把握偏低但立场明确。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期：趋势型交易区间，近40棒包络63300-65422，宽约5.7倍ATR",
+        "位置：收盘距上沿约3.1倍ATR、距下沿约2.6倍ATR，处于区间中部，交易性价比最差",
+        "方向：阶段一判定中性；日内短线因K1强空头棒跌破前低而偏弱",
+        "约束：Always In 为多头（力度弱），制度上只允许评估做多侧，但当前没有顺势做多的结构锚点",
+        "风险形态：阶段一标记区间中部（middle_range）与重叠（overlap），属于典型不宜入场环境"
+      ],
+      "watch_points": [
+        "若价格回落到区间下沿一带（63300-63700）并出现止跌的多头信号棒，再评估顺多头的做多方案",
+        "第一个短线支撑是64264/64261，若收盘跌破，下一层看64153，再看63820；跌破不追空（方向中性禁止做空）",
+        "若价格反弹到64495.9-64718.5一带，注意这是阻力区，不是做空许可，按中性方向继续观望",
+        "只有出现连续3到5根同向强趋势棒突破区间边界并有跟随回踩，才重新评估趋势性机会",
+        "价格仍处区间中部时不入场；等待结构走到边缘再重新分析"
+      ],
+      "risk_assessment": "区间中部入场，上下都有空间但都不占优势，止损与目标容易被来回扫；K1刚以强空头棒跌破前低，短线还有下探惯性，此时做多属于逆短线动量接刀；做空又受方向中性、Always In 多头的制度约束。整体期望值不足，故不下单。",
+      "invalidation_condition": "无方案，不适用；若后续价格收盘跌破63300或站上65422并形成跟随，需重新分析周期定位。"
+    },
+    "current_metrics_errors": [],
+    "preserved_stop_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是趋势型交易区间且方向中性，价格处在近40棒的中间位置（收盘位置分位约0.46），既没到上沿也没到下沿。K1是强空头趋势棒、刚跌破前低和均线，短线动能偏空；而 Always In 只允许做多侧，逆着刚出现的空头动能去接刀没有结构依据。阶段一已标出区间中部、重叠两类风险形态，中部入场属于典型亏损模式，因此本轮先等待价格走到区间边缘、或出现顺多头方向的清晰信号棒后再评估。",
+      "diagnosis_confidence": 58,
+      "diagnosis_confidence_reasoning": "近40棒上下沿多次被测试、波动大但结构可读，低点逐步抬高而高点略降，是趋势型交易区间；但它与宽通道边界模糊，且长程背景是下跌后的整理，故只给中等把握。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "方向中性、价格在区间中部、K1刚跌破均线与前低，此刻无论做多还是做空都缺少结构支撑；不交易是当前最合理的决定，把握偏低但立场明确。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期：趋势型交易区间，近40棒包络63300-65422，宽约5.7倍ATR",
+        "位置：收盘距上沿约3.1倍ATR、距下沿约2.6倍ATR，处于区间中部，交易性价比最差",
+        "方向：阶段一判定中性；日内短线因K1强空头棒跌破前低而偏弱",
+        "约束：Always In 为多头（力度弱），制度上只允许评估做多侧，但当前没有顺势做多的结构锚点",
+        "风险形态：阶段一标记区间中部（middle_range）与重叠（overlap），属于典型不宜入场环境"
+      ],
+      "watch_points": [
+        "若价格回落到区间下沿一带（63300-63700）并出现止跌的多头信号棒，再评估顺多头的做多方案",
+        "第一个短线支撑是64264/64261，若收盘跌破，下一层看64153，再看63820；跌破不追空（方向中性禁止做空）",
+        "若价格反弹到64495.9-64718.5一带，注意这是阻力区，不是做空许可，按中性方向继续观望",
+        "只有出现连续3到5根同向强趋势棒突破区间边界并有跟随回踩，才重新评估趋势性机会",
+        "价格仍处区间中部时不入场；等待结构走到边缘再重新分析"
+      ],
+      "risk_assessment": "区间中部入场，上下都有空间但都不占优势，止损与目标容易被来回扫；K1刚以强空头棒跌破前低，短线还有下探惯性，此时做多属于逆短线动量接刀；做空又受方向中性、Always In 多头的制度约束。整体期望值不足，故不下单。",
+      "invalidation_condition": "无方案，不适用；若后续价格收盘跌破63300或站上65422并形成跟随，需重新分析周期定位。"
+    },
+    "preserved_stop_errors_with_existing_cap": [],
+    "original_rr": null,
+    "saved_final_stage1": {
+      "cycle_position": "trending_tr",
+      "alternative_cycle_position": "broad_channel",
+      "direction": "neutral",
+      "diagnosis_confidence": 58,
+      "spike_stage": null,
+      "climax_risk": "none",
+      "market_phase": "stable",
+      "transition_risk": null,
+      "detected_patterns": [
+        "middle_range",
+        "overlap"
+      ],
+      "key_signals": [
+        "自K21低点63300反弹至K6高点65250后遇阻回落，高点65250低于前高65422，形成低点抬高、高点略降的收敛震荡",
+        "K6之后连续回落5根，K1为强空头趋势棒（实体比0.877、收盘贴近最低），且跌破K2低点并收在EMA20下方",
+        "近40根为宽幅震荡（区间宽约5.7倍ATR），上下边界多次被测试：上沿约65100-65422，下沿约63300-63700",
+        "当前收盘位置分位约0.46，处于区间中部偏下，方向不明确"
+      ],
+      "htf_context": "长程K200-K41：从68241一带持续下跌到62530附近（K145），随后V型反弹最高到66122（K130），之后转入63300-65422的大幅宽幅震荡。整体大背景为下跌后的宽幅整理，方向中性，不否决近期结构，仅作为上方65250-65422区域存在较重阻力的背景提示。",
+      "entry_setup": "等待",
+      "support_levels": [
+        "64264",
+        "63820",
+        "63632-63300"
+      ],
+      "resistance_levels": [
+        "64495.9",
+        "64718.5",
+        "65250-65422"
+      ],
+      "strategy_files_needed": [
+        "震荡区间分析识别.txt",
+        "震荡区间交易策略.txt"
+      ],
+      "risk_warning": "价格处于近40棒宽幅震荡的中部偏下，方向中性，不在区间边缘，不宜追单或双边刮头皮；K1刚以强空头趋势棒跌破EMA20和前小低点，若继续下探需观察64134、63820两处支撑是否失守，上方65250-65422阻力未破。区间中部入场风险高。；存活突破：区间高度 MM 可作 TP2 候选",
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bear",
+        "signal_bar": {
+          "bar": "K1",
+          "quality": "medium",
+          "reason": "K1为强空头趋势棒、收盘贴近最低，单棒做空信号质量尚可，但处在宽幅震荡中部偏下、方向背景中性，不具备顺势入场条件"
+        },
+        "entry_setup_type": "none",
+        "follow_through": "pending"
+      },
+      "bar_by_bar_summary": [
+        {
+          "bar": "K5",
+          "role": "structure",
+          "bar_type": "inside",
+          "context_effect": "weakens_bull",
+          "follow_through": "yes",
+          "trapped_side": "none",
+          "reason": "K5是K6的内包棒，冲高后动能停滞，多头推进被打断"
+        },
+        {
+          "bar": "K4",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "no",
+          "trapped_side": "bulls",
+          "reason": "K4空头趋势棒回落，确认冲高失败，套住追高的多头"
+        },
+        {
+          "bar": "K3",
+          "role": "noise",
+          "bar_type": "doji",
+          "context_effect": "neutral",
+          "follow_through": "no",
+          "trapped_side": "none",
+          "reason": "K3反弹但收在中位、实体很小，属于下跌途中的犹豫，未改变回落方向"
+        },
+        {
+          "bar": "K2",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "yes",
+          "trapped_side": "bulls",
+          "reason": "K2继续下跌并压低重心，空头重新掌控短线节奏"
+        },
+        {
+          "bar": "K1",
+          "role": "signal",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "pending",
+          "trapped_side": "bulls",
+          "reason": "K1强空头趋势棒跌破K2低点并收在EMA20下方，是当前回落腿的做空信号棒候选，但仍在区间内"
+        }
+      ],
+      "gate_trace": [
+        {
+          "node_id": "1.1",
+          "question": "数据是否足够？",
+          "answer": "是",
+          "reason": "已收盘K线 200 根 ≥ 20 根阈值（已通过前置数据闸门），数据量满足分析要求。",
+          "bar_range": "K200-K1",
+          "skipped": false
+        },
+        {
+          "node_id": "1.2",
+          "question": "是否能识别市场周期？",
+          "answer": "是",
+          "reason": "近40棒为上下边界多次测试的宽幅震荡，低点抬高、高点略降，有弱方向偏好但不足3组可画平行通道线，可识别为趋势型交易区间",
+          "branch": "trending_tr",
+          "section": "周期识别",
+          "bar_range": "K40-K1"
+        },
+        {
+          "node_id": "1.3",
+          "question": "当前市场是否极端混乱？",
+          "answer": "否",
+          "reason": "虽然有回落，但波段结构清晰，EMA有斜率，不是铁丝网或极端交易区间",
+          "branch": "trending_tr",
+          "section": "周期识别",
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "2.1",
+          "question": "是否存在明确惯性方向？",
+          "answer": "否",
+          "reason": "近8根先冲高再回落，多空信号交织，EMA上倾但价格已跌破EMA，短期无一致惯性方向",
+          "branch": "neutral",
+          "section": "方向判断",
+          "bar_range": "K8-K1"
+        },
+        {
+          "node_id": "2.2",
+          "question": "长程大背景方向与近期方向的关系？",
+          "answer": "中性",
+          "reason": "长程背景为下跌后的宽幅整理（中性），近期结构也是中性震荡，两者一致，无冲突",
+          "branch": "neutral_background",
+          "section": "方向判断",
+          "bar_range": "K200-K41"
+        },
+        {
+          "node_id": "2.3",
+          "question": "当前方向是多头还是空头？",
+          "answer": "中性",
+          "reason": "五信号投票（阈值±3）：EMA斜率:+1(d=300.0236>thr=18.6102)；收盘重心(加权):-1(diff=-297.0915<-thr=-37.2205)；波段结构:0(枢轴不足,highs=1,lows=0)；趋势棒占比:-1(空3/多1≥1.5×)；K线重叠:+1(均值重叠0.304<0.45,低重叠强化多头方向)。中窗口重心(加权):+1(diff=790.8853>thr=37.2205,W=20)（与短窗口一致）。综合score=0（≥+3→多头，≤-3→空头，否则中性）→neutral。",
+          "bar_range": "K8-K1",
+          "skipped": false,
+          "branch": "neutral"
+        },
+        {
+          "node_id": "2.4",
+          "question": "当前是否处于 Always In 状态？",
+          "answer": "是",
+          "reason": "【近端主判K8-K1】加权收盘高于EMA占比77.8%≥65%；EMA斜率向上(d=112.5206>thr=18.6102)；波段结构:枢轴不足(highs=1,lows=0)；最大价格区间1.81×ATR(>1.5×阈值,回撤较深✗)。判定为Always In Long（AIL）（结构弱/回撤深，弱AIL）。【背景参考K20-K1】加权多侧64.3%/空侧35.7%；EMA斜率向上(d=300.0236>thr=18.6102)。",
+          "bar_range": "K20-K1",
+          "skipped": false,
+          "branch": "AIL"
+        },
+        {
+          "node_id": "2.5",
+          "question": "当前惯性强度是否足够支持趋势跟踪？",
+          "answer": "否",
+          "reason": "近端冲高回落、K1跌破EMA并创回落新低，惯性不足，不适合激进趋势跟踪；但周期识别清晰、非极端混乱，闸门通过进入阶段二，按区间逻辑等待边界或清晰信号",
+          "branch": "neutral",
+          "section": "方向判断",
+          "bar_range": "K8-K1"
+        }
+      ],
+      "gate_result": "proceed",
+      "node_coverage": {
+        "1.1": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        },
+        "1.3": {
+          "program": "否",
+          "program_branch": "",
+          "final": "否",
+          "final_branch": "",
+          "overridden": false
+        },
+        "2.3": {
+          "program": "中性",
+          "program_branch": "neutral",
+          "final": "中性",
+          "final_branch": "neutral",
+          "overridden": false
+        },
+        "2.4": {
+          "program": "是",
+          "program_branch": "AIL",
+          "final": "是",
+          "final_branch": "AIL",
+          "overridden": false
+        },
+        "2.5": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        }
+      },
+      "trend_context": {
+        "background_direction": "neutral",
+        "trading_direction": "neutral",
+        "primary_direction": "neutral",
+        "conflict": false,
+        "relationship": "neutral_background",
+        "recent_spike": null,
+        "with_trend_rule": "方向中性，等待结构明朗后再定义顺势"
+      },
+      "program_features": {
+        "barbwire_score": 0.0,
+        "barbwire_candidate": false,
+        "overlap_mean_10": 0.346,
+        "price_position": 0.46,
+        "zone": "middle_third",
+        "swing_structure": "HH+HL",
+        "breakout_quality": "surviving",
+        "breakout_attempt_type": "close",
+        "mm_as_tp_ok": true,
+        "spike_aftermath_hint": "none",
+        "scale_conflict": false
+      }
+    },
+    "saved_final_stage2": {
+      "decision": {
+        "order_direction": null,
+        "order_type": "不下单",
+        "entry_price": null,
+        "entry_basis_bar": null,
+        "entry_basis_extreme": null,
+        "entry_rule": null,
+        "take_profit_price": null,
+        "take_profit_price_2": null,
+        "stop_loss_price": null,
+        "reasoning": "当前是趋势型交易区间且方向中性，价格处在近40棒的中间位置（收盘位置分位约0.46），既没到上沿也没到下沿。K1是强空头趋势棒、刚跌破前低和均线，短线动能偏空；而 Always In 只允许做多侧，逆着刚出现的空头动能去接刀没有结构依据。阶段一已标出区间中部、重叠两类风险形态，中部入场属于典型亏损模式，因此本轮先等待价格走到区间边缘、或出现顺多头方向的清晰信号棒后再评估。",
+        "diagnosis_confidence": 58,
+        "diagnosis_confidence_reasoning": "近40棒上下沿多次被测试、波动大但结构可读，低点逐步抬高而高点略降，是趋势型交易区间；但它与宽通道边界模糊，且长程背景是下跌后的整理，故只给中等把握。",
+        "trade_confidence": 42,
+        "trade_confidence_reasoning": "方向中性、价格在区间中部、K1刚跌破均线与前低，此刻无论做多还是做空都缺少结构支撑；不交易是当前最合理的决定，把握偏低但立场明确。",
+        "estimated_win_rate": null,
+        "estimated_win_rate_reasoning": null,
+        "key_factors": [
+          "周期：趋势型交易区间，近40棒包络63300-65422，宽约5.7倍ATR",
+          "位置：收盘距上沿约3.1倍ATR、距下沿约2.6倍ATR，处于区间中部，交易性价比最差",
+          "方向：阶段一判定中性；日内短线因K1强空头棒跌破前低而偏弱",
+          "约束：Always In 为多头（力度弱），制度上只允许评估做多侧，但当前没有顺势做多的结构锚点",
+          "风险形态：阶段一标记区间中部（middle_range）与重叠（overlap），属于典型不宜入场环境"
+        ],
+        "watch_points": [
+          "若价格回落到区间下沿一带（63300-63700）并出现止跌的多头信号棒，再评估顺多头的做多方案",
+          "第一个短线支撑是64264/64261，若收盘跌破，下一层看64153，再看63820；跌破不追空（方向中性禁止做空）",
+          "若价格反弹到64495.9-64718.5一带，注意这是阻力区，不是做空许可，按中性方向继续观望",
+          "只有出现连续3到5根同向强趋势棒突破区间边界并有跟随回踩，才重新评估趋势性机会",
+          "价格仍处区间中部时不入场；等待结构走到边缘再重新分析"
+        ],
+        "risk_assessment": "区间中部入场，上下都有空间但都不占优势，止损与目标容易被来回扫；K1刚以强空头棒跌破前低，短线还有下探惯性，此时做多属于逆短线动量接刀；做空又受方向中性、Always In 多头的制度约束。整体期望值不足，故不下单。",
+        "invalidation_condition": "无方案，不适用；若后续价格收盘跌破63300或站上65422并形成跟随，需重新分析周期定位。"
+      },
+      "diagnosis_summary": {
+        "cycle_position": "trending_tr",
+        "direction": "neutral",
+        "key_signals": [
+          "近40棒区间63300-65422，上下沿多次测试",
+          "低点抬高、高点略降，属趋势型交易区间",
+          "K1强空头趋势棒跌破前低并收在均线下方",
+          "收盘处于区间中部，方向不明确"
+        ]
+      },
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bear",
+        "signal_bar": {
+          "bar": null,
+          "quality": "invalid",
+          "pattern": "none",
+          "reason": "K1是空头趋势棒，方向与 Always In 只允许的做多侧相反，不能作为做多信号棒；当前也没有出现可用的多头信号棒"
+        },
+        "entry_bar": {
+          "strength": "not_triggered",
+          "follow_through": false,
+          "still_valid": false,
+          "freshness": "pending",
+          "bar": null
+        },
+        "second_entry": {
+          "is_second_entry": false,
+          "type": "none"
+        }
+      },
+      "decision_trace": [
+        {
+          "node_id": "6.1",
+          "section": "区间",
+          "question": "是否存在清晰上下边界？",
+          "answer": "是",
+          "reason": "近40棒上沿约65100-65422、下沿约63300-63700，各有两次以上测试，均线斜率平缓，符合区间态",
+          "skipped": false,
+          "bar_range": "K40-K1"
+        },
+        {
+          "node_id": "6.2",
+          "section": "区间",
+          "question": "是普通交易区间还是趋势型交易区间？",
+          "answer": "是",
+          "branch": "trending_tr",
+          "reason": "低点逐步抬高但序列不足三组、通道线画不稳定，有轻微方向偏好，归为趋势型交易区间",
+          "skipped": false,
+          "bar_range": "K40-K8"
+        },
+        {
+          "node_id": "6.3",
+          "section": "区间",
+          "question": "当前价格是否在区间边界？",
+          "answer": "否",
+          "branch": "middle",
+          "reason": "K1收盘距上沿约3.1倍ATR、距下沿约2.6倍ATR，收盘位置分位约0.46，属区间中部",
+          "skipped": false,
+          "bar_range": "K6-K1"
+        },
+        {
+          "node_id": "9.0",
+          "section": "入场信号",
+          "question": "信号棒是否已经收盘且质量足够？",
+          "answer": "否",
+          "reason": "最新K1为空头趋势棒，与 Always In 只允许的做多侧相反；没有出现顺多头方向的合格收盘信号棒",
+          "skipped": false,
+          "bar_range": "K3-K1"
+        },
+        {
+          "node_id": "9.1",
+          "question": "信号K线是否已经收盘？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.2",
+          "question": "信号K线方向是否与计划方向一致？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "不适用",
+          "skipped": true
+        },
+        {
+          "node_id": "9.3",
+          "question": "信号棒是否过长？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.5",
+          "question": "是否有跟随？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.0P",
+          "section": "入场信号",
+          "question": "背景驱动限价单评估（§9.0=否 时**必须**填写）",
+          "answer": "否",
+          "reason": "方向中性且价格处区间中部，按规则 §9.0P 默认等待；下方最近支撑64264仅距收盘约11点，止损无合理结构缓冲，且K1短线动能偏空，顺多头方向挂限价等于逆短线动量接刀，不给三价",
+          "skipped": false,
+          "bar_range": "K8-K1"
+        },
+        {
+          "node_id": "10.1",
+          "section": "风险收益",
+          "question": "是否能明确止损？",
+          "answer": "不适用",
+          "reason": "本轮无入场方案，无可设定止损",
+          "skipped": true,
+          "bar_range": "不适用"
+        },
+        {
+          "node_id": "10.2",
+          "section": "风险收益",
+          "question": "止损是否过大？",
+          "answer": "不适用",
+          "reason": "无方案可评估",
+          "skipped": true,
+          "bar_range": "不适用"
+        },
+        {
+          "node_id": "14.1",
+          "section": "禁止行为",
+          "question": "是否触犯禁止行为清单？",
+          "answer": "否",
+          "reason": "扫描 §14：未触犯任何禁止项。①未逆势下单；②未追高潮或尖峰；③未在区间中部入场；④未在铁丝网中交易；⑤未做仓位管理。本轮选择观望，符合规则。",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        }
+      ],
+      "terminal": {
+        "node_id": "9.0P",
+        "outcome": "wait",
+        "label": "区间中部方向中性，无合格做多信号棒，等待价格走到边缘再评估"
+      },
+      "next_cycle_prediction": {
+        "cycle": "trending_tr",
+        "direction": "neutral",
+        "probabilities": {
+          "spike": 4,
+          "micro_channel": 3,
+          "tight_channel": 5,
+          "normal_channel": 10,
+          "broad_channel": 25,
+          "trending_tr": 35,
+          "trading_range": 15,
+          "extreme_tr": 3
+        },
+        "reasoning": "当前是上下沿反复测试的宽幅整理，最近一段冲高回落后又回到中部偏下，结构既没有形成连续尖峰，也没有出现趋势线被有效跌破加极点测试失败的反转组合。因此多数情况下更可能延续这种来回震荡：区间宽度大、波段重叠多，最像趋势型交易区间；若下沿被反复守住并逐步抬高，也可能向宽通道演化。出现尖峰或微型通道的概率偏低，出现极端窄幅混乱的概率也不高。这只是粗粒度的周期演变倾向，不是精确点位预测。",
+        "unpredictable": false,
+        "features_used": [
+          "stage1_diagnosis",
+          "kline_features",
+          "stage2_decision"
+        ]
+      },
+      "node_coverage": {
+        "9.1": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.2": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.3": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.5": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        }
+      }
+    },
+    "limitations": "Metrics-only replay without frame-specific tick/freshness checks; not a full Stage2 approval or AI rerun."
+  },
+  {
+    "file": "2026-11-18_10-11-21_BTCUSDT.P_30m.json",
+    "meta": {
+      "timestamp_local_iso": "2026-11-18T10:03:21.707",
+      "timestamp_local_ms": 1794967401707,
+      "symbol": "BTCUSDT.P",
+      "timeframe": "30m",
+      "bar_count": 200,
+      "ai_provider": {
+        "thinking": true,
+        "reasoning_effort": "low",
+        "context_window": 2000000
+      },
+      "decision_stance": "balanced"
+    },
+    "original_model_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是宽幅交易区间，价格处在区间中部（收盘分位0.46），距上沿约3.1倍ATR、距下沿约2.6倍ATR，上下都不靠边。K1虽是接近无下影的强空头趋势棒，但出现在区间中部且与程序判定的弱持续多头（AIL）方向相反，质量只能算弱。方向中性、区间中部、无清晰边界锚点，做多或做空都容易两头被打，故观望。",
+      "diagnosis_confidence": 60,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间特征较清晰；但内部波段幅度差异大、结构标签HH+HL与区间属性有冲突，故给60分。",
+      "trade_confidence": 35,
+      "trade_confidence_reasoning": "区间中部、方向中性、K1短期偏空却处在弱AIL背景中，做多做空都缺乏结构锚点；10.3无法成立，观察等待是更稳妥的决策，把握度偏低。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期为宽幅交易区间，收盘在区间中部，不靠边",
+        "K1为强空头趋势棒但位于区间中部且与弱AIL方向冲突，信号质量弱",
+        "上下边界距当前价各约2.6到3.1倍ATR，空间都不明确",
+        "程序判定弱持续多头（AIL），不允许在区间上沿做空"
+      ],
+      "watch_points": [
+        "价格回落到64264到64134这一支撑带并出现明确止跌信号（如H2或看涨反转棒加跟随），再评估顺AIL做多",
+        "价格反弹到64495.9到64718.5阻力带并出现看跌拒绝，仅作风险提示，不做空（AIL下禁止上沿做空）",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422或下沿63300，等回踩测试后再评估顺势，禁止追第一棒",
+        "注意risk_warning提示：区间中部任何方向追单都容易两头被打，不要在K1这根强阴线上追空"
+      ],
+      "risk_assessment": "当前处在宽幅区间中部，追单风险高；短期动能偏空但大背景是弱持续多头，方向来回可能反复；不存在清晰的入场锚点与结构止损，强行入场等于在区间中段赌博。",
+      "invalidation_condition": "若后续价格收盘跌破63300区间下沿或站上65422区间上沿，本观望结论失效，需重新分析周期与方向。"
+    },
+    "current_metrics_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是宽幅交易区间，价格处在区间中部（收盘分位0.46），距上沿约3.1倍ATR、距下沿约2.6倍ATR，上下都不靠边。K1虽是接近无下影的强空头趋势棒，但出现在区间中部且与程序判定的弱持续多头（AIL）方向相反，质量只能算弱。方向中性、区间中部、无清晰边界锚点，做多或做空都容易两头被打，故观望。",
+      "diagnosis_confidence": 60,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间特征较清晰；但内部波段幅度差异大、结构标签HH+HL与区间属性有冲突，故给60分。",
+      "trade_confidence": 35,
+      "trade_confidence_reasoning": "区间中部、方向中性、K1短期偏空却处在弱AIL背景中，做多做空都缺乏结构锚点；10.3无法成立，观察等待是更稳妥的决策，把握度偏低。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期为宽幅交易区间，收盘在区间中部，不靠边",
+        "K1为强空头趋势棒但位于区间中部且与弱AIL方向冲突，信号质量弱",
+        "上下边界距当前价各约2.6到3.1倍ATR，空间都不明确",
+        "程序判定弱持续多头（AIL），不允许在区间上沿做空"
+      ],
+      "watch_points": [
+        "价格回落到64264到64134这一支撑带并出现明确止跌信号（如H2或看涨反转棒加跟随），再评估顺AIL做多",
+        "价格反弹到64495.9到64718.5阻力带并出现看跌拒绝，仅作风险提示，不做空（AIL下禁止上沿做空）",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422或下沿63300，等回踩测试后再评估顺势，禁止追第一棒",
+        "注意risk_warning提示：区间中部任何方向追单都容易两头被打，不要在K1这根强阴线上追空"
+      ],
+      "risk_assessment": "当前处在宽幅区间中部，追单风险高；短期动能偏空但大背景是弱持续多头，方向来回可能反复；不存在清晰的入场锚点与结构止损，强行入场等于在区间中段赌博。",
+      "invalidation_condition": "若后续价格收盘跌破63300区间下沿或站上65422区间上沿，本观望结论失效，需重新分析周期与方向。"
+    },
+    "current_metrics_errors": [],
+    "preserved_stop_decision": {
+      "order_direction": null,
+      "order_type": "不下单",
+      "entry_price": null,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": null,
+      "take_profit_price_2": null,
+      "stop_loss_price": null,
+      "reasoning": "当前是宽幅交易区间，价格处在区间中部（收盘分位0.46），距上沿约3.1倍ATR、距下沿约2.6倍ATR，上下都不靠边。K1虽是接近无下影的强空头趋势棒，但出现在区间中部且与程序判定的弱持续多头（AIL）方向相反，质量只能算弱。方向中性、区间中部、无清晰边界锚点，做多或做空都容易两头被打，故观望。",
+      "diagnosis_confidence": 60,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间特征较清晰；但内部波段幅度差异大、结构标签HH+HL与区间属性有冲突，故给60分。",
+      "trade_confidence": 35,
+      "trade_confidence_reasoning": "区间中部、方向中性、K1短期偏空却处在弱AIL背景中，做多做空都缺乏结构锚点；10.3无法成立，观察等待是更稳妥的决策，把握度偏低。",
+      "estimated_win_rate": null,
+      "estimated_win_rate_reasoning": null,
+      "key_factors": [
+        "周期为宽幅交易区间，收盘在区间中部，不靠边",
+        "K1为强空头趋势棒但位于区间中部且与弱AIL方向冲突，信号质量弱",
+        "上下边界距当前价各约2.6到3.1倍ATR，空间都不明确",
+        "程序判定弱持续多头（AIL），不允许在区间上沿做空"
+      ],
+      "watch_points": [
+        "价格回落到64264到64134这一支撑带并出现明确止跌信号（如H2或看涨反转棒加跟随），再评估顺AIL做多",
+        "价格反弹到64495.9到64718.5阻力带并出现看跌拒绝，仅作风险提示，不做空（AIL下禁止上沿做空）",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422或下沿63300，等回踩测试后再评估顺势，禁止追第一棒",
+        "注意risk_warning提示：区间中部任何方向追单都容易两头被打，不要在K1这根强阴线上追空"
+      ],
+      "risk_assessment": "当前处在宽幅区间中部，追单风险高；短期动能偏空但大背景是弱持续多头，方向来回可能反复；不存在清晰的入场锚点与结构止损，强行入场等于在区间中段赌博。",
+      "invalidation_condition": "若后续价格收盘跌破63300区间下沿或站上65422区间上沿，本观望结论失效，需重新分析周期与方向。"
+    },
+    "preserved_stop_errors_with_existing_cap": [],
+    "original_rr": null,
+    "saved_final_stage1": {
+      "cycle_position": "trading_range",
+      "alternative_cycle_position": "trending_tr",
+      "direction": "neutral",
+      "diagnosis_confidence": 60,
+      "spike_stage": null,
+      "climax_risk": "none",
+      "market_phase": "stable",
+      "transition_risk": null,
+      "detected_patterns": [
+        "middle_range",
+        "overlap",
+        "h1",
+        "always_in"
+      ],
+      "key_signals": [
+        "近40根K线在63300到65422之间来回大幅摆动，宽度约5.7倍ATR，当前收盘位于区间中部偏下，属于典型的双向震荡区间",
+        "最新一根K1是实体占比0.877的强空头趋势棒，收盘几乎贴在最低点附近，把前面K6启动的反弹结构压回下方",
+        "程序判定为弱版持续多头状态（AIL），但最近5根K线（K5到K1）连续走弱，短期动能明显偏空，两者方向不一致，属于区间内部的正常来回摆动",
+        "空头方向在该回撤段内已连续触发3次向下突破（候选L3），显示下方仍有抛压；多头方向自K23高点起只触发1次（候选H1）"
+      ],
+      "htf_context": "长程背景K200到K41先是一段明显下跌（从68363跌到62592附近），随后出现一根超大阳线快速拉回，之后在63300到65600之间宽幅震荡，20均线整体走平、斜率很小，没有清晰的单边趋势；因此长程背景方向记为中性，只作为上方阻力和下方支撑的参考，不否决近期结构判断",
+      "entry_setup": "等待（价格处在区间中部，上下都不靠边，不适合入场，需等价格走到区间边缘或出现明确的突破回踩后再评估）",
+      "support_levels": [
+        "64264",
+        "64134",
+        "63633"
+      ],
+      "resistance_levels": [
+        "64495.9",
+        "64718.5",
+        "64719"
+      ],
+      "strategy_files_needed": [
+        "震荡区间分析识别.txt",
+        "震荡区间交易策略.txt",
+        "趋势型交易区间策略.txt"
+      ],
+      "risk_warning": "当前价格在宽幅区间中部，上下空间都不明确，任何方向追单都容易两头被打；K1虽然是强势空头趋势棒，但整体仍处在区间内部，不能当作趋势启动来追空；同时程序判定为弱版持续多头（AIL），短期回落与大方向不一致，属于典型的容易反复的区间环境；存活突破：区间高度 MM 可作 TP2 候选",
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bear",
+        "signal_bar": {
+          "bar": "K1",
+          "quality": "weak",
+          "reason": "K1是实体很大的空头趋势棒，收盘贴近最低，形式上是合格的空头信号棒；但它出现在宽幅区间中部，且与程序判定的弱持续多头状态相反，逆着大方向，因此只能算弱信号，不能作为入场依据"
+        },
+        "entry_setup_type": "none",
+        "follow_through": "pending"
+      },
+      "bar_by_bar_summary": [
+        {
+          "bar": "K5",
+          "role": "structure",
+          "bar_type": "inside",
+          "context_effect": "weakens_bull",
+          "follow_through": "yes",
+          "trapped_side": "bulls",
+          "reason": "K5在前一根冲高后收成内包阴线，说明上攻65250附近遇阻，反弹力量开始减弱"
+        },
+        {
+          "bar": "K4",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "failed",
+          "trapped_side": "bulls",
+          "reason": "K4收出实体较大的阴线并跌破K5低点，确认上方压力有效，但下一根又被小幅拉回，跟随不彻底"
+        },
+        {
+          "bar": "K3",
+          "role": "noise",
+          "bar_type": "doji",
+          "context_effect": "neutral",
+          "follow_through": "pending",
+          "trapped_side": "none",
+          "reason": "K3是一根收在中部的十字星，多空短暂僵持，未提供新的方向信息"
+        },
+        {
+          "bar": "K2",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "yes",
+          "trapped_side": "bulls",
+          "reason": "K2再度收出阴线并跌破K3低点，短期重心继续下移，空头重新掌控近端节奏"
+        },
+        {
+          "bar": "K1",
+          "role": "signal",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "pending",
+          "trapped_side": "bulls",
+          "reason": "K1以几乎无下影的大阴线收在最低点附近，创出K8以来新低，把近端反弹买盘套住，短期偏空明显"
+        }
+      ],
+      "gate_trace": [
+        {
+          "node_id": "1.1",
+          "question": "数据是否足够？",
+          "answer": "是",
+          "reason": "已收盘K线 200 根 ≥ 20 根阈值（已通过前置数据闸门），数据量满足分析要求。",
+          "bar_range": "K200-K1",
+          "skipped": false
+        },
+        {
+          "node_id": "1.2",
+          "question": "是否能识别市场周期？",
+          "answer": "是",
+          "reason": "近40根K线在63300到65422之间大幅来回，上下边界各被多次测试，20均线接近走平，价格反复穿越均线，符合普通交易区间特征",
+          "branch": "trading_range",
+          "section": "周期识别",
+          "bar_range": "K40-K1"
+        },
+        {
+          "node_id": "1.3",
+          "question": "当前市场是否极端混乱？",
+          "answer": "否",
+          "reason": "虽然有来回摆动，但区间边界清晰、单根K线幅度较大、方向来回可辨，不属于方向完全丧失的极端混乱状态",
+          "branch": "not_extreme",
+          "section": "周期识别",
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "2.1",
+          "question": "是否存在明确惯性方向？",
+          "answer": "中性",
+          "reason": "近8根K线先反弹后回落，重心方向不一致，均线斜率极小，无法认定单一惯性方向",
+          "branch": "neutral",
+          "section": "方向判断",
+          "bar_range": "K8-K1"
+        },
+        {
+          "node_id": "2.2",
+          "question": "长程大背景方向与近期方向的关系？",
+          "answer": "中性",
+          "reason": "长程背景是宽幅震荡、20均线走平，近期也是区间内来回，两者都无明确方向，属于中性背景与中性近期的组合，不构成冲突",
+          "branch": "neutral_background",
+          "section": "方向判断",
+          "bar_range": "K200-K1"
+        },
+        {
+          "node_id": "2.3",
+          "question": "当前方向是多头还是空头？",
+          "answer": "中性",
+          "reason": "五信号投票（阈值±3）：EMA斜率:+1(d=300.0236>thr=18.6102)；收盘重心(加权):-1(diff=-297.0915<-thr=-37.2205)；波段结构:0(枢轴不足,highs=1,lows=0)；趋势棒占比:-1(空3/多1≥1.5×)；K线重叠:+1(均值重叠0.304<0.45,低重叠强化多头方向)。中窗口重心(加权):+1(diff=790.8853>thr=37.2205,W=20)（与短窗口一致）。综合score=0（≥+3→多头，≤-3→空头，否则中性）→neutral。",
+          "bar_range": "K8-K1",
+          "skipped": false,
+          "branch": "neutral"
+        },
+        {
+          "node_id": "2.4",
+          "question": "当前是否处于 Always In 状态？",
+          "answer": "是",
+          "reason": "【近端主判K8-K1】加权收盘高于EMA占比77.8%≥65%；EMA斜率向上(d=112.5206>thr=18.6102)；波段结构:枢轴不足(highs=1,lows=0)；最大价格区间1.81×ATR(>1.5×阈值,回撤较深✗)。判定为Always In Long（AIL）（结构弱/回撤深，弱AIL）。【背景参考K20-K1】加权多侧64.3%/空侧35.7%；EMA斜率向上(d=300.0236>thr=18.6102)。",
+          "bar_range": "K20-K1",
+          "skipped": false,
+          "branch": "AIL"
+        },
+        {
+          "node_id": "2.5",
+          "question": "当前惯性强度是否足够支持趋势跟踪？",
+          "answer": "否",
+          "reason": "惯性不足，不做激进趋势跟踪；但周期已识别为交易区间、非极端混乱，闸门通过，进入阶段二按区间环境提高门槛评估（仅顺方向一侧边界等待）",
+          "branch": "neutral",
+          "section": "惯性评估",
+          "bar_range": "K8-K1"
+        }
+      ],
+      "gate_result": "proceed",
+      "node_coverage": {
+        "1.1": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        },
+        "1.3": {
+          "program": "否",
+          "program_branch": "",
+          "final": "否",
+          "final_branch": "",
+          "overridden": false
+        },
+        "2.3": {
+          "program": "中性",
+          "program_branch": "neutral",
+          "final": "中性",
+          "final_branch": "neutral",
+          "overridden": false
+        },
+        "2.4": {
+          "program": "是",
+          "program_branch": "AIL",
+          "final": "是",
+          "final_branch": "AIL",
+          "overridden": false
+        },
+        "2.5": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        }
+      },
+      "trend_context": {
+        "background_direction": "neutral",
+        "trading_direction": "neutral",
+        "primary_direction": "neutral",
+        "conflict": false,
+        "relationship": "neutral_background",
+        "recent_spike": null,
+        "with_trend_rule": "方向中性，等待结构明朗后再定义顺势"
+      },
+      "program_features": {
+        "barbwire_score": 0.0,
+        "barbwire_candidate": false,
+        "overlap_mean_10": 0.346,
+        "price_position": 0.46,
+        "zone": "middle_third",
+        "swing_structure": "HH+HL",
+        "breakout_quality": "surviving",
+        "breakout_attempt_type": "close",
+        "mm_as_tp_ok": true,
+        "spike_aftermath_hint": "none",
+        "scale_conflict": false
+      }
+    },
+    "saved_final_stage2": {
+      "decision": {
+        "order_direction": null,
+        "order_type": "不下单",
+        "entry_price": null,
+        "entry_basis_bar": null,
+        "entry_basis_extreme": null,
+        "entry_rule": null,
+        "take_profit_price": null,
+        "take_profit_price_2": null,
+        "stop_loss_price": null,
+        "reasoning": "当前是宽幅交易区间，价格处在区间中部（收盘分位0.46），距上沿约3.1倍ATR、距下沿约2.6倍ATR，上下都不靠边。K1虽是接近无下影的强空头趋势棒，但出现在区间中部且与程序判定的弱持续多头（AIL）方向相反，质量只能算弱。方向中性、区间中部、无清晰边界锚点，做多或做空都容易两头被打，故观望。",
+        "diagnosis_confidence": 60,
+        "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间特征较清晰；但内部波段幅度差异大、结构标签HH+HL与区间属性有冲突，故给60分。",
+        "trade_confidence": 35,
+        "trade_confidence_reasoning": "区间中部、方向中性、K1短期偏空却处在弱AIL背景中，做多做空都缺乏结构锚点；10.3无法成立，观察等待是更稳妥的决策，把握度偏低。",
+        "estimated_win_rate": null,
+        "estimated_win_rate_reasoning": null,
+        "key_factors": [
+          "周期为宽幅交易区间，收盘在区间中部，不靠边",
+          "K1为强空头趋势棒但位于区间中部且与弱AIL方向冲突，信号质量弱",
+          "上下边界距当前价各约2.6到3.1倍ATR，空间都不明确",
+          "程序判定弱持续多头（AIL），不允许在区间上沿做空"
+        ],
+        "watch_points": [
+          "价格回落到64264到64134这一支撑带并出现明确止跌信号（如H2或看涨反转棒加跟随），再评估顺AIL做多",
+          "价格反弹到64495.9到64718.5阻力带并出现看跌拒绝，仅作风险提示，不做空（AIL下禁止上沿做空）",
+          "若价格以连续3到5根强趋势棒收盘突破区间上沿65422或下沿63300，等回踩测试后再评估顺势，禁止追第一棒",
+          "注意risk_warning提示：区间中部任何方向追单都容易两头被打，不要在K1这根强阴线上追空"
+        ],
+        "risk_assessment": "当前处在宽幅区间中部，追单风险高；短期动能偏空但大背景是弱持续多头，方向来回可能反复；不存在清晰的入场锚点与结构止损，强行入场等于在区间中段赌博。",
+        "invalidation_condition": "若后续价格收盘跌破63300区间下沿或站上65422区间上沿，本观望结论失效，需重新分析周期与方向。"
+      },
+      "diagnosis_summary": {
+        "cycle_position": "trading_range",
+        "direction": "neutral",
+        "key_signals": [
+          "近40根K线在63300到65422之间宽幅来回，宽度约5.7倍ATR",
+          "K1为实体占比0.877的强空头趋势棒，收盘贴在最低点附近，短期偏空",
+          "程序判定弱持续多头（AIL），与短期动能方向不一致",
+          "价格处在区间中部，收盘分位0.46"
+        ]
+      },
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bear",
+        "signal_bar": {
+          "bar": null,
+          "quality": "invalid",
+          "pattern": "none",
+          "reason": "计划型挂单尚无已收盘合格信号棒；K1虽是强空头趋势棒，但位于区间中部且逆着弱AIL，不能作为做空信号依据"
+        },
+        "entry_bar": {
+          "strength": "not_triggered",
+          "follow_through": false,
+          "still_valid": false,
+          "freshness": "pending",
+          "bar": null
+        },
+        "second_entry": {
+          "is_second_entry": false,
+          "type": "none"
+        }
+      },
+      "decision_trace": [
+        {
+          "node_id": "6.1",
+          "section": "交易区间",
+          "question": "是否存在清晰上下边界？",
+          "answer": "是",
+          "reason": "上下边界各被多次测试，20均线接近走平并反复被穿越，符合普通交易区间",
+          "skipped": false,
+          "bar_range": "K40-K1"
+        },
+        {
+          "node_id": "6.2",
+          "section": "交易区间",
+          "question": "是普通交易区间还是趋势型交易区间？",
+          "answer": "否",
+          "reason": "区间内无稳定单边偏好、边界对称，按普通交易区间处理",
+          "branch": "trading_range",
+          "skipped": false,
+          "bar_range": "K40-K1"
+        },
+        {
+          "node_id": "6.3",
+          "section": "交易区间",
+          "question": "当前价格是否在区间边界？",
+          "answer": "否",
+          "reason": "收盘位置分位0.46，距上沿约3.08倍ATR、距下沿约2.62倍ATR，处在区间中部1/3，不靠边",
+          "branch": "middle",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "6.4",
+          "section": "交易区间",
+          "question": "是否出现Barbwire / 极窄区间？",
+          "answer": "否",
+          "reason": "铁丝网分数0.00，近10棒平均重叠0.35，未达紧凑区间阈值",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "9.0",
+          "section": "入场信号",
+          "question": "信号棒是否已经收盘且质量足够？",
+          "answer": "否",
+          "reason": "K1为强空头趋势棒，但出现在区间中部、逆着弱AIL方向，质量只能算弱，不能作为合格信号棒，须继续评估§9.0P",
+          "skipped": false,
+          "bar_range": "K1"
+        },
+        {
+          "node_id": "9.1",
+          "question": "信号K线是否已经收盘？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.2",
+          "question": "信号K线方向是否与计划方向一致？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "不适用",
+          "skipped": true
+        },
+        {
+          "node_id": "9.3",
+          "question": "信号棒是否过长？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.4",
+          "section": "入场信号",
+          "question": "是否是第一次入场？",
+          "answer": "不适用",
+          "reason": "未产生入场方案",
+          "skipped": true,
+          "bar_range": "不适用"
+        },
+        {
+          "node_id": "9.5",
+          "question": "是否有跟随？",
+          "answer": "不适用",
+          "reason": "§9.0=否（无有效信号棒），§9.1-9.5不适用，程序跳过。",
+          "bar_range": "K1",
+          "skipped": true
+        },
+        {
+          "node_id": "9.6",
+          "section": "入场信号",
+          "question": "是否为二次入场？",
+          "answer": "否",
+          "reason": "当前无H2/L2等有效二次入场结构，空头侧L计数已达3次但方向与AIL冲突",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "9.7",
+          "section": "入场信号",
+          "question": "入场棒是否强势且有跟随？",
+          "answer": "不适用",
+          "reason": "计划型挂单未触发，尚无入场棒",
+          "skipped": true,
+          "bar_range": "不适用"
+        },
+        {
+          "node_id": "9.0P",
+          "section": "入场信号",
+          "question": "背景驱动限价单评估（§9.0=否 时**必须**填写）",
+          "answer": "否",
+          "reason": "价格在区间中部、非边界，方向中性且§2.4为AIL，只允许做多侧；但下方真正结构失效位在64134到63633一带，与当前价距离远、支撑64264属K1低点噪音级，无法给出清晰结构止损与有效目标的限价三价，故不挂单",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "10.1",
+          "section": "风险收益",
+          "question": "是否能明确止损？",
+          "answer": "否",
+          "reason": "区间中部无清晰结构锚点，最近支撑64264为K1低点噪音级，真实波段低点在64134到63633，止损距离过大且不具结构意义",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "14.1",
+          "section": "禁止行为",
+          "question": "是否触犯禁止行为清单？",
+          "answer": "否",
+          "reason": "扫描§14：未触犯禁止项。①未逆势下单（本次不下单）；②未追高潮（climax_risk=none）；③未在区间中部入场；④未做仓位管理；⑤未追突破。",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        }
+      ],
+      "terminal": {
+        "node_id": "9.0P",
+        "outcome": "wait",
+        "label": "区间中部无边界锚点，方向中性且仅允许顺AIL做多侧，等待价格到边界或出现合格信号"
+      },
+      "next_cycle_prediction": {
+        "cycle": "trading_range",
+        "direction": "neutral",
+        "probabilities": {
+          "spike": 2,
+          "micro_channel": 4,
+          "tight_channel": 6,
+          "normal_channel": 14,
+          "broad_channel": 24,
+          "trending_tr": 18,
+          "trading_range": 28,
+          "extreme_tr": 4
+        },
+        "reasoning": "当前处在宽幅双向震荡中，20均线走平、价格反复穿越均线，没有出现尖峰级突破与跟随。三桶视角看：①延续当前结构--继续在63300到65422之间来回震荡的概率最高，因此trading_range与broad_channel占比最大；②转换中--若后续出现连续强趋势棒收盘突破边界并回踩确认，可能转为趋势型交易区间或常规通道；③粘性反转风险--目前无明确趋势可反转，暂不侧重。由于方向边缘极薄，只给粗粒度分布，不作精确点预测。",
+        "unpredictable": false,
+        "features_used": [
+          "stage1_diagnosis",
+          "kline_features"
+        ]
+      },
+      "node_coverage": {
+        "9.1": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.2": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.3": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.5": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        }
+      }
+    },
+    "limitations": "Metrics-only replay without frame-specific tick/freshness checks; not a full Stage2 approval or AI rerun."
+  },
+  {
+    "file": "2026-11-18_10-30-01-488000_BTCUSDT.P_30m.json",
+    "meta": {
+      "timestamp_local_iso": "2026-11-18T10:30:01.488",
+      "timestamp_local_ms": 1794969001488,
+      "symbol": "BTCUSDT.P",
+      "timeframe": "30m",
+      "bar_count": 200,
+      "ai_provider": {
+        "thinking": true,
+        "reasoning_effort": "low",
+        "context_window": 2000000
+      },
+      "decision_stance": "balanced"
+    },
+    "original_model_decision": {
+      "order_direction": "做多",
+      "order_type": "限价单",
+      "entry_price": 64261.4,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": 64627.2,
+      "take_profit_price_2": 65133.7,
+      "stop_loss_price": 64103.99,
+      "reasoning": "当前是宽幅交易区间，大方向中性、但程序判定为弱持续多头（AIL），只允许做多一侧。当前价64546.6在区间中部，不宜追多；改为计划型限价：在近端支撑64261.4（程序列出的第一支撑，也是K2低点带）挂多单，等回踩到位再买。止损放在K1低点64104下方1跳，跌破即多头反包失败。TP1取上方近期阻力64627.2，TP2取更远阻力65133.7（区间偏上结构位）。风险约157点、回报约366点，RR约2.3，方程通过。",
+      "diagnosis_confidence": 62,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间属性清晰；但内部波段差异大、结构标签mixed，故给62分。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "这是回踩近端支撑的计划型限价，结构止损与目标都清楚，RR约2.3，方程为正；但方向中性、入场位置仍在区间偏下部而非极边界，且需要回撤约2.3倍ATR才会触发，属于接受瑕疵的边界限价方案，把握度克制在42。",
+      "estimated_win_rate": 50,
+      "estimated_win_rate_reasoning": "区间下沿支撑带做多、顺弱AIL一侧，历史类似边界反弹大致五五开，取50%用于方程。",
+      "key_factors": [
+        "周期为宽幅交易区间，方向中性，§2.4为弱AIL，只允许做多侧",
+        "K1强多头反包把追空盘套住，短期动能由空转多，支持回踩做多逻辑",
+        "入场选程序列出的第一支撑64261.4，止损在K1低点64104下方，结构清晰",
+        "TP1为近期阻力64627.2，TP2为更远阻力65133.7，RR约2.3"
+      ],
+      "watch_points": [
+        "若价格先上探64627.2到64718.5阻力带，不追多、不追空，等待回落后再看64261.4附近是否给出止跌",
+        "回踩64261.4若出现明确看跌跟随、跌破64104收盘，则本多单方案失效，重判区间可能向下扩展",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422，等回踩测试后再评估顺势做多，禁止追第一棒",
+        "阶段一检测到breakout_failure与failed_breakout：K2向下假突破已被K1推翻，注意上方64627.2一带可能再次出现假突破式拒绝，到位后按结构处理",
+        "risk_warning提示区间中部追单易被打：本方案只在回踩支撑成交，不市价追K1的强势反包"
+      ],
+      "risk_assessment": "方向中性、入场位于区间偏下部，若区间整体下移，回踩64261后可能继续下滑至64134甚至63633，止损有被扫风险；K1强反包后市场也可能直接上探64627而不回落，导致限价单不成交。",
+      "invalidation_condition": "若K线收盘跌破64104（K1低点），本多单结构失效，需重新诊断；若收盘突破65422区间上沿则本方案目标失效，须重估。"
+    },
+    "current_metrics_decision": {
+      "order_direction": "做多",
+      "order_type": "限价单",
+      "entry_price": 64261.4,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": 64627.2,
+      "take_profit_price_2": 65133.7,
+      "stop_loss_price": 63895.600000000006,
+      "reasoning": "当前是宽幅交易区间，大方向中性、但程序判定为弱持续多头（AIL），只允许做多一侧。当前价64546.6在区间中部，不宜追多；改为计划型限价：在近端支撑64261.4（程序列出的第一支撑，也是K2低点带）挂多单，等回踩到位再买。止损放在K1低点64104下方1跳，跌破即多头反包失败。TP1取上方近期阻力64627.2，TP2取更远阻力65133.7（区间偏上结构位）。风险约157点、回报约366点，RR约2.3，方程通过。",
+      "diagnosis_confidence": 62,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间属性清晰；但内部波段差异大、结构标签mixed，故给62分。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "这是回踩近端支撑的计划型限价，结构止损与目标都清楚，RR约2.3，方程为正；但方向中性、入场位置仍在区间偏下部而非极边界，且需要回撤约2.3倍ATR才会触发，属于接受瑕疵的边界限价方案，把握度克制在42。",
+      "estimated_win_rate": 50,
+      "estimated_win_rate_reasoning": "区间下沿支撑带做多、顺弱AIL一侧，历史类似边界反弹大致五五开，取50%用于方程。",
+      "key_factors": [
+        "周期为宽幅交易区间，方向中性，§2.4为弱AIL，只允许做多侧",
+        "K1强多头反包把追空盘套住，短期动能由空转多，支持回踩做多逻辑",
+        "入场选程序列出的第一支撑64261.4，止损在K1低点64104下方，结构清晰",
+        "TP1为近期阻力64627.2，TP2为更远阻力65133.7，RR约2.3"
+      ],
+      "watch_points": [
+        "若价格先上探64627.2到64718.5阻力带，不追多、不追空，等待回落后再看64261.4附近是否给出止跌",
+        "回踩64261.4若出现明确看跌跟随、跌破64104收盘，则本多单方案失效，重判区间可能向下扩展",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422，等回踩测试后再评估顺势做多，禁止追第一棒",
+        "阶段一检测到breakout_failure与failed_breakout：K2向下假突破已被K1推翻，注意上方64627.2一带可能再次出现假突破式拒绝，到位后按结构处理",
+        "risk_warning提示区间中部追单易被打：本方案只在回踩支撑成交，不市价追K1的强势反包"
+      ],
+      "risk_assessment": "方向中性、入场位于区间偏下部，若区间整体下移，回踩64261后可能继续下滑至64134甚至63633，止损有被扫风险；K1强反包后市场也可能直接上探64627而不回落，导致限价单不成交。",
+      "invalidation_condition": "若K线收盘跌破64104（K1低点），本多单结构失效，需重新诊断；若收盘突破65422区间上沿则本方案目标失效，须重估。"
+    },
+    "current_metrics_errors": [
+      "decision prices: trader equation fails at 50% win rate (risk=365.8, reward=365.8, expectancy≈0); 10.3 must be 否 and order_type=不下单 unless prices are fixed"
+    ],
+    "preserved_stop_decision": {
+      "order_direction": "做多",
+      "order_type": "限价单",
+      "entry_price": 64261.4,
+      "entry_basis_bar": null,
+      "entry_basis_extreme": null,
+      "entry_rule": null,
+      "take_profit_price": 64627.2,
+      "take_profit_price_2": 65133.7,
+      "stop_loss_price": 64103.99,
+      "reasoning": "当前是宽幅交易区间，大方向中性、但程序判定为弱持续多头（AIL），只允许做多一侧。当前价64546.6在区间中部，不宜追多；改为计划型限价：在近端支撑64261.4（程序列出的第一支撑，也是K2低点带）挂多单，等回踩到位再买。止损放在K1低点64104下方1跳，跌破即多头反包失败。TP1取上方近期阻力64627.2，TP2取更远阻力65133.7（区间偏上结构位）。风险约157点、回报约366点，RR约2.3，方程通过。",
+      "diagnosis_confidence": 62,
+      "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间属性清晰；但内部波段差异大、结构标签mixed，故给62分。",
+      "trade_confidence": 42,
+      "trade_confidence_reasoning": "这是回踩近端支撑的计划型限价，结构止损与目标都清楚，RR约2.3，方程为正；但方向中性、入场位置仍在区间偏下部而非极边界，且需要回撤约2.3倍ATR才会触发，属于接受瑕疵的边界限价方案，把握度克制在42。",
+      "estimated_win_rate": 50,
+      "estimated_win_rate_reasoning": "区间下沿支撑带做多、顺弱AIL一侧，历史类似边界反弹大致五五开，取50%用于方程。",
+      "key_factors": [
+        "周期为宽幅交易区间，方向中性，§2.4为弱AIL，只允许做多侧",
+        "K1强多头反包把追空盘套住，短期动能由空转多，支持回踩做多逻辑",
+        "入场选程序列出的第一支撑64261.4，止损在K1低点64104下方，结构清晰",
+        "TP1为近期阻力64627.2，TP2为更远阻力65133.7，RR约2.3"
+      ],
+      "watch_points": [
+        "若价格先上探64627.2到64718.5阻力带，不追多、不追空，等待回落后再看64261.4附近是否给出止跌",
+        "回踩64261.4若出现明确看跌跟随、跌破64104收盘，则本多单方案失效，重判区间可能向下扩展",
+        "若价格以连续3到5根强趋势棒收盘突破区间上沿65422，等回踩测试后再评估顺势做多，禁止追第一棒",
+        "阶段一检测到breakout_failure与failed_breakout：K2向下假突破已被K1推翻，注意上方64627.2一带可能再次出现假突破式拒绝，到位后按结构处理",
+        "risk_warning提示区间中部追单易被打：本方案只在回踩支撑成交，不市价追K1的强势反包"
+      ],
+      "risk_assessment": "方向中性、入场位于区间偏下部，若区间整体下移，回踩64261后可能继续下滑至64134甚至63633，止损有被扫风险；K1强反包后市场也可能直接上探64627而不回落，导致限价单不成交。",
+      "invalidation_condition": "若K线收盘跌破64104（K1低点），本多单结构失效，需重新诊断；若收盘突破65422区间上沿则本方案目标失效，须重估。"
+    },
+    "preserved_stop_errors_with_existing_cap": [
+      "decision prices: risk_reward 2.32 : 1 exceeds maximum 1.00:1 for TP1 after stop adjustment; set order_type=不下单 with 10.3=否"
+    ],
+    "original_rr": {
+      "risk": 157.4100000000035,
+      "reward": 365.79999999999563,
+      "ratio": 2.3238676068863957,
+      "ratio_text": "2.32 : 1"
+    },
+    "saved_final_stage1": {
+      "cycle_position": "trading_range",
+      "alternative_cycle_position": "trending_tr",
+      "direction": "neutral",
+      "diagnosis_confidence": 62,
+      "spike_stage": null,
+      "climax_risk": "none",
+      "market_phase": "stable",
+      "transition_risk": null,
+      "detected_patterns": [
+        "middle_range",
+        "overlap",
+        "failed_breakout",
+        "reversal_attempt",
+        "h1",
+        "always_in",
+        "breakout_failure"
+      ],
+      "key_signals": [
+        "近40根K线仍在63300到65422之间大幅来回，宽度约5.6倍ATR，收盘位置分位0.59，依旧属区间中部偏上，不靠任何一边",
+        "新增K1是一根实体占比0.564、收盘位置0.921的强多头趋势棒：它先向下刺破前低64134到64104，随后一路拉升收在64546.6，几乎把前一根K2的大阴线全部吞回，属于典型的跌破后拉回，把追空的人套在里面",
+        "K2是收在最低附近的强空头趋势棒，但紧接着K1不但没有跟随下跌，反而强势反包，说明区间下沿一带的抛压被迅速买回，空头跟随失败",
+        "程序判定为弱版持续多头状态（AIL），K1收盘64546.6重新站上20均线64456.6，短期动能由偏空转回偏多，但整体仍处区间内部摆动"
+      ],
+      "htf_context": "长程背景K200到K41先是一段明显下跌（从68363跌到62592附近），随后一根超大阳线快速拉回，之后在63300到65600之间宽幅震荡，20均线整体走平、斜率极小，没有清晰单边趋势；长程背景方向记为中性，只作上方阻力与下方支撑参考，不否决近期结构判断",
+      "entry_setup": "等待（K1虽强势反包，但价格仍在区间中部偏上，距上沿约2.3倍ATR、距下沿约3.3倍ATR，上下都不靠边，需等价格走到区间边缘或形成明确回踩后再评估）",
+      "support_levels": [
+        "64264",
+        "64134",
+        "64104"
+      ],
+      "resistance_levels": [
+        "64627.2",
+        "64718.5",
+        "65133.7"
+      ],
+      "strategy_files_needed": [
+        "震荡区间分析识别.txt",
+        "震荡区间交易策略.txt",
+        "趋势型交易区间策略.txt"
+      ],
+      "risk_warning": "新增K1虽然强势反包、短期转多，但价格仍在宽幅区间中部，距上沿还有2.3倍ATR，追多等于在区间中段买入，容易在接近上沿时被回落打回；同时K1这次是向下假突破（跌破64104后收回），只说明区间属性更强，并不等于趋势启动；程序判定为弱AIL，方向中性，任何单边追单都容易两头挨打；存活突破：区间高度MM可作TP2候选；存活突破：区间高度 MM 可作 TP2 候选",
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bull",
+        "signal_bar": {
+          "bar": "K1",
+          "quality": "weak",
+          "reason": "K1是实体清晰、收盘接近高点的强多头趋势棒，形式上是合格的多头信号棒；但它出现在区间中部偏上、属于向下假突破后的反包，位置不在边界，按规则区间中部信号棒可靠性低，只能算弱信号，不能单独作为入场依据"
+        },
+        "entry_setup_type": "none",
+        "follow_through": "pending"
+      },
+      "bar_by_bar_summary": [
+        {
+          "bar": "K5",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "yes",
+          "trapped_side": "bulls",
+          "reason": "K5冲高到64981后回落收出阴线，说明65250一带压力有效，反弹动能开始衰竭"
+        },
+        {
+          "bar": "K4",
+          "role": "noise",
+          "bar_type": "doji",
+          "context_effect": "neutral",
+          "follow_through": "pending",
+          "trapped_side": "none",
+          "reason": "K4是一根带长上影的十字星，多空短暂僵持，未提供新的方向信息"
+        },
+        {
+          "bar": "K3",
+          "role": "confirmation",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "yes",
+          "trapped_side": "bulls",
+          "reason": "K3收出实体较大的阴线并跌破K4低点，短期重心继续下移，空头一度掌控近端节奏"
+        },
+        {
+          "bar": "K2",
+          "role": "trap",
+          "bar_type": "trend_bear",
+          "context_effect": "strengthens_bear",
+          "follow_through": "failed",
+          "trapped_side": "bears",
+          "reason": "K2以几乎无下影的大阴线收在最低点64275并下探64264，看似突破向下，但紧接着被K1强势反包，追空者被套，跟随失败"
+        },
+        {
+          "bar": "K1",
+          "role": "signal",
+          "bar_type": "trend_bull",
+          "context_effect": "strengthens_bull",
+          "follow_through": "pending",
+          "trapped_side": "bears",
+          "reason": "K1先刺破前低到64104后强力拉升，收在64546.6接近最高，几乎吞回K2整根阴线，把追空盘全部套住，短期动能由空转多"
+        }
+      ],
+      "gate_trace": [
+        {
+          "node_id": "1.1",
+          "question": "数据是否足够？",
+          "answer": "是",
+          "reason": "已收盘K线 200 根 ≥ 20 根阈值（已通过前置数据闸门），数据量满足分析要求。",
+          "bar_range": "K200-K1",
+          "skipped": false
+        },
+        {
+          "node_id": "1.2",
+          "question": "是否能识别市场周期？",
+          "answer": "是",
+          "reason": "近40根K线在63300到65422之间大幅来回，上下边界各被多次测试，20均线接近走平、价格反复穿越均线，K1向下假突破后收回进一步强化区间属性，符合普通交易区间",
+          "branch": "trading_range",
+          "section": "周期识别",
+          "bar_range": "K41-K1"
+        },
+        {
+          "node_id": "1.3",
+          "question": "当前市场是否极端混乱？",
+          "answer": "否",
+          "reason": "虽有来回摆动，但区间边界清晰、单根K线幅度较大、方向来回可辨，K1的反包也提供了明确信息，不属于方向完全丧失的极端混乱状态",
+          "branch": "not_extreme",
+          "section": "周期识别",
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "2.1",
+          "question": "是否存在明确惯性方向？",
+          "answer": "中性",
+          "reason": "近8根K线先跌后急拉，K2的空头动能被K1全部收回，重心方向前后不一致，均线斜率极小，无法认定单一惯性方向",
+          "branch": "neutral",
+          "section": "方向判断",
+          "bar_range": "K9-K1"
+        },
+        {
+          "node_id": "2.2",
+          "question": "长程大背景方向与近期方向的关系？",
+          "answer": "中性",
+          "reason": "长程背景是宽幅震荡、20均线走平，近期同样是区间内来回（K1反包不改区间本质），两者都无明确方向，属中性背景配中性近期，不构成冲突",
+          "branch": "neutral_background",
+          "section": "方向判断",
+          "bar_range": "K200-K1"
+        },
+        {
+          "node_id": "2.3",
+          "question": "当前方向是多头还是空头？",
+          "answer": "中性",
+          "reason": "五信号投票（阈值±3）：EMA斜率:+1(d=285.7356>thr=18.9974)；收盘重心(加权):-1(diff=-305.7423<-thr=-37.9947)；波段结构:0(枢轴不足,highs=0,lows=0)；趋势棒占比:-1(空3/多1≥1.5×)；K线重叠:+1(均值重叠0.397<0.45,低重叠强化多头方向)。中窗口重心(加权):+1(diff=690.8169>thr=37.9947,W=20)（与短窗口一致）。综合score=0（≥+3→多头，≤-3→空头，否则中性）→neutral。",
+          "bar_range": "K8-K1",
+          "skipped": false,
+          "branch": "neutral"
+        },
+        {
+          "node_id": "2.4",
+          "question": "当前是否处于 Always In 状态？",
+          "answer": "是",
+          "reason": "【近端主判K8-K1】加权收盘高于EMA占比80.6%≥65%；EMA斜率向上(d=66.6805>thr=18.9974)；波段结构:枢轴不足(highs=0,lows=0)；最大价格区间1.78×ATR(>1.5×阈值,回撤较深✗)。判定为Always In Long（AIL）（结构弱/回撤深，弱AIL）。【背景参考K20-K1】加权多侧69.5%/空侧30.5%；EMA斜率向上(d=285.7356>thr=18.9974)。",
+          "bar_range": "K20-K1",
+          "skipped": false,
+          "branch": "AIL"
+        },
+        {
+          "node_id": "2.5",
+          "question": "当前惯性强度是否足够支持趋势跟踪？",
+          "answer": "否",
+          "reason": "惯性不足，K1虽强势但仍处区间中部，不做激进趋势跟踪；周期已识别为交易区间、非极端混乱，闸门通过，进入阶段二按区间环境提高门槛评估（仅顺方向一侧边界等待）。相对上一轮变化是：K2的偏空跟随被K1完全推翻，近端动能转为偏多，但整体仍是区间",
+          "branch": "neutral",
+          "section": "惯性评估",
+          "bar_range": "K9-K1"
+        }
+      ],
+      "gate_result": "proceed",
+      "incremental_delta": {
+        "new_closed_bars": [
+          "K1"
+        ],
+        "changed_fields": [
+          "diagnosis_confidence",
+          "detected_patterns",
+          "key_signals",
+          "support_levels",
+          "resistance_levels",
+          "risk_warning",
+          "entry_setup",
+          "bar_analysis",
+          "bar_by_bar_summary"
+        ],
+        "summary": "相对上一轮：新增K1先跌破前低到64104再强力反包，收在64546.6几乎吞回K2整根大阴线，把追空盘套住并重新站上20均线，近端动能由偏空转为偏多；但价格仍在63300到65422区间中部（收盘分位0.59），周期维持普通交易区间、方向维持中性，故仅上调检测标签（新增failed_breakout与reversal_attempt）与置信度到62，支撑阻力按新低点64104及最新阻力重算，决策层仍为等待边界"
+      },
+      "node_coverage": {
+        "1.1": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        },
+        "1.3": {
+          "program": "否",
+          "program_branch": "",
+          "final": "否",
+          "final_branch": "",
+          "overridden": false
+        },
+        "2.3": {
+          "program": "中性",
+          "program_branch": "neutral",
+          "final": "中性",
+          "final_branch": "neutral",
+          "overridden": false
+        },
+        "2.4": {
+          "program": "是",
+          "program_branch": "AIL",
+          "final": "是",
+          "final_branch": "AIL",
+          "overridden": false
+        },
+        "2.5": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        }
+      },
+      "trend_context": {
+        "background_direction": "neutral",
+        "trading_direction": "neutral",
+        "primary_direction": "neutral",
+        "conflict": false,
+        "relationship": "neutral_background",
+        "recent_spike": null,
+        "with_trend_rule": "方向中性，等待结构明朗后再定义顺势"
+      },
+      "program_features": {
+        "barbwire_score": 0.0,
+        "barbwire_candidate": false,
+        "overlap_mean_10": 0.391,
+        "price_position": 0.587,
+        "zone": "middle_third",
+        "swing_structure": "mixed",
+        "breakout_quality": "surviving",
+        "breakout_attempt_type": "close",
+        "mm_as_tp_ok": true,
+        "spike_aftermath_hint": "none",
+        "scale_conflict": false
+      }
+    },
+    "saved_final_stage2": {
+      "decision": {
+        "order_direction": null,
+        "order_type": "不下单",
+        "entry_price": null,
+        "entry_basis_bar": null,
+        "entry_basis_extreme": null,
+        "entry_rule": null,
+        "take_profit_price": null,
+        "take_profit_price_2": null,
+        "stop_loss_price": null,
+        "reasoning": "当前不下单：decision prices: trader equation fails at 50% win rate (risk=365.8, reward=365.8, expectancy≈0); 10.3 must be 否 and order_type=不下单 unless prices are fixed。此前入场建议未生效，等待重新确认入场条件。",
+        "diagnosis_confidence": 62,
+        "diagnosis_confidence_reasoning": "近40根K线在63300到65422之间大幅来回，20均线走平、价格反复穿越，区间属性清晰；但内部波段差异大、结构标签mixed，故给62分。",
+        "trade_confidence": 42,
+        "trade_confidence_reasoning": "当前没有有效入场计划",
+        "estimated_win_rate": null,
+        "estimated_win_rate_reasoning": null,
+        "key_factors": [
+          "周期为宽幅交易区间，方向中性，§2.4为弱AIL，只允许做多侧",
+          "K1强多头反包把追空盘套住，短期动能由空转多，支持回踩做多逻辑",
+          "入场选程序列出的第一支撑64261.4，止损在K1低点64104下方，结构清晰",
+          "TP1为近期阻力64627.2，TP2为更远阻力65133.7，RR约2.3"
+        ],
+        "watch_points": [
+          "若价格先上探64627.2到64718.5阻力带，不追多、不追空，等待回落后再看64261.4附近是否给出止跌",
+          "回踩64261.4若出现明确看跌跟随、跌破64104收盘，则本多单方案失效，重判区间可能向下扩展",
+          "若价格以连续3到5根强趋势棒收盘突破区间上沿65422，等回踩测试后再评估顺势做多，禁止追第一棒",
+          "阶段一检测到breakout_failure与failed_breakout：K2向下假突破已被K1推翻，注意上方64627.2一带可能再次出现假突破式拒绝，到位后按结构处理",
+          "risk_warning提示区间中部追单易被打：本方案只在回踩支撑成交，不市价追K1的强势反包"
+        ],
+        "risk_assessment": "方向中性、入场位于区间偏下部，若区间整体下移，回踩64261后可能继续下滑至64134甚至63633，止损有被扫风险；K1强反包后市场也可能直接上探64627而不回落，导致限价单不成交。",
+        "invalidation_condition": "若K线收盘跌破64104（K1低点），本多单结构失效，需重新诊断；若收盘突破65422区间上沿则本方案目标失效，须重估。",
+        "model_reasoning_before_no_order": "当前是宽幅交易区间，大方向中性、但程序判定为弱持续多头（AIL），只允许做多一侧。当前价64546.6在区间中部，不宜追多；改为计划型限价：在近端支撑64261.4（程序列出的第一支撑，也是K2低点带）挂多单，等回踩到位再买。止损放在K1低点64104下方1跳，跌破即多头反包失败。TP1取上方近期阻力64627.2，TP2取更远阻力65133.7（区间偏上结构位）。风险约157点、回报约366点，RR约2.3，方程通过。"
+      },
+      "diagnosis_summary": {
+        "cycle_position": "trading_range",
+        "direction": "neutral",
+        "key_signals": [
+          "近40根K线在63300到65422之间宽幅来回，宽度约5.6倍ATR，当前收盘位于区间中部偏上",
+          "K1强多头反包，先刺破64104再收在64546.6，几乎吞回K2大阴线，追空盘被套",
+          "程序判定弱持续多头（AIL），K1重新站上20均线64456.6",
+          "空头侧已触发3次下破（候选L3），但K1反包表明下沿一带抛压被买回"
+        ]
+      },
+      "bar_analysis": {
+        "always_in": "long",
+        "last_closed_bar": "K1",
+        "bar_type": "trend_bull",
+        "signal_bar": {
+          "bar": null,
+          "quality": "invalid",
+          "pattern": "none",
+          "reason": "计划型限价：等待回踩64261.4支撑到位，尚无已收盘的合格限价支撑信号棒"
+        },
+        "entry_bar": {
+          "strength": "not_triggered",
+          "follow_through": false,
+          "still_valid": true,
+          "freshness": "pending",
+          "bar": null
+        },
+        "second_entry": {
+          "is_second_entry": false,
+          "type": "none"
+        }
+      },
+      "decision_trace": [
+        {
+          "node_id": "6.1",
+          "section": "交易区间",
+          "question": "是否存在清晰上下边界？",
+          "answer": "是",
+          "reason": "上下边界各被多次测试，20均线接近走平并反复被穿越，符合普通交易区间",
+          "skipped": false,
+          "bar_range": "K41-K1"
+        },
+        {
+          "node_id": "6.2",
+          "section": "交易区间",
+          "question": "是普通交易区间还是趋势型交易区间？",
+          "answer": "否",
+          "reason": "区间内无稳定单边偏好、边界大致对称，按普通交易区间处理",
+          "branch": "trading_range",
+          "skipped": false,
+          "bar_range": "K41-K1"
+        },
+        {
+          "node_id": "6.3",
+          "section": "交易区间",
+          "question": "当前价格是否在区间边界？",
+          "answer": "否",
+          "reason": "当前收盘64546.6位于区间中部（分位0.59），不靠边；因此不市价入场，改为在下方支撑64261.4挂计划型限价",
+          "branch": "middle",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "6.4",
+          "section": "交易区间",
+          "question": "是否出现Barbwire / 极窄区间？",
+          "answer": "否",
+          "reason": "铁丝网分数0.00，近10棒平均重叠0.39，未达紧凑区间阈值",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "9.0",
+          "section": "入场信号",
+          "question": "信号棒是否已经收盘且质量足够？",
+          "answer": "是",
+          "reason": "K1虽是强多头趋势棒，但位于区间中部，质量只能算弱，不构成边界处的合格做多信号棒，须继续评估§9.0P（程序校正：计划型限价单，接受 weak/invalid 或无信号棒，等待回撤/反弹到位入场，非等下一根确认棒后放弃。）",
+          "skipped": false,
+          "bar_range": "K1"
+        },
+        {
+          "node_id": "9.1",
+          "question": "信号K线是否已经收盘？",
+          "answer": "是",
+          "reason": "K1为已收盘K线（KlineFrame内所有K线均已收盘），可作为信号棒。",
+          "bar_range": "K1",
+          "skipped": false
+        },
+        {
+          "node_id": "9.2",
+          "question": "信号K线方向是否与计划方向一致？",
+          "answer": "不适用",
+          "reason": "无交易计划方向（order_direction缺失），§9.2不适用。",
+          "bar_range": "不适用",
+          "skipped": true
+        },
+        {
+          "node_id": "9.3",
+          "question": "信号棒是否过长？",
+          "answer": "否",
+          "reason": "K1 range_atr_ratio=1.265 ≤ 2.0，信号棒长度在可接受范围内，不过长。",
+          "bar_range": "K1",
+          "skipped": false
+        },
+        {
+          "node_id": "9.4",
+          "section": "入场信号",
+          "question": "是否是第一次入场？",
+          "answer": "是",
+          "reason": "区间下沿支撑带尚未被本轮回踩测试，属第一次计划型边界入场，允许在顺AIL方向评估",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "9.5",
+          "question": "是否有跟随？",
+          "answer": "等待",
+          "reason": "K1的follow_through_1_2='pending'→等待。",
+          "bar_range": "K1",
+          "skipped": false
+        },
+        {
+          "node_id": "9.6",
+          "section": "入场信号",
+          "question": "是否为二次入场？",
+          "answer": "否",
+          "reason": "当前无H2/L2等有效二次入场结构，本次为首次边界限价",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "9.7",
+          "section": "入场信号",
+          "question": "入场棒是否强势且有跟随？",
+          "answer": "不适用",
+          "reason": "计划型限价等待触发，尚无入场棒",
+          "skipped": true,
+          "bar_range": "不适用"
+        },
+        {
+          "node_id": "9.0P",
+          "section": "入场信号",
+          "question": "背景驱动限价单评估（§9.0=否 时**必须**填写）",
+          "answer": "是",
+          "reason": "计划型限价：周期为交易区间、§2.4为弱AIL只允许做多侧；价格靠近程序列出的近端支撑64261.4，在此挂多单等回踩到位，结构止损放K1低点64104下方，属于有效的边界限价setup",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "10.1",
+          "section": "风险收益",
+          "question": "是否能明确止损？",
+          "answer": "是",
+          "reason": "止损放在K1低点64104下方约1跳（64103.99），跌破即多头反包结构失效，结构锚点明确",
+          "skipped": false,
+          "bar_range": "K2-K1"
+        },
+        {
+          "node_id": "10.2",
+          "section": "风险收益",
+          "question": "止损是否过大？",
+          "answer": "否",
+          "reason": "入场64261.4、止损64103.99，风险约157.4点（约0.41倍ATR），远小于2倍ATR与区间宽度10%的212点，可接受",
+          "skipped": false,
+          "bar_range": "K2-K1"
+        },
+        {
+          "node_id": "10.3",
+          "section": "风险收益",
+          "question": "交易者方程是否通过？",
+          "answer": "否",
+          "reason": "入场64261.4，止损64103.99，TP1=64627.2：风险=64261.4-64103.99=157.41点，回报=64627.2-64261.4=365.8点，RR=2.32≥1.0；按胜率50%：0.5×365.8=182.9 > 0.5×157.41=78.7，方程为正，通过（程序按 decision 三价校验未通过：decision prices: trader equation fails at 50% win rate (risk=365.8, reward=365.8, expectancy≈0); 10.3 must be 否 and order_type=不下单 unless prices are fixed，已改为不下单。）",
+          "skipped": false,
+          "bar_range": "K10-K1"
+        },
+        {
+          "node_id": "11.2",
+          "section": "下单方式",
+          "question": "是通道回撤吗？",
+          "answer": "是",
+          "reason": "交易区间下沿支撑回撤，采用计划型限价单在64261.4挂多，符合区间边界限价路径",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        },
+        {
+          "node_id": "14.1",
+          "section": "禁止行为",
+          "question": "是否触犯禁止行为清单？",
+          "answer": "否",
+          "reason": "扫描§14：未触犯。①未逆势（顺弱AIL只做多侧）；②未追高潮（climax_risk=none）；③未在区间中部市价入场（改为回踩支撑限价）；④无仓位管理；⑤未追突破；⑥未双边刮头皮",
+          "skipped": false,
+          "bar_range": "K11-K1"
+        }
+      ],
+      "terminal": {
+        "node_id": "10.3",
+        "outcome": "reject",
+        "label": "区间下沿支撑计划型限价做多，等回踩64261.4触发，止损64104下方，TP1 64627.2 / TP2 65133.7"
+      },
+      "next_cycle_prediction": {
+        "cycle": "trading_range",
+        "direction": "neutral",
+        "probabilities": {
+          "spike": 2,
+          "micro_channel": 4,
+          "tight_channel": 6,
+          "normal_channel": 14,
+          "broad_channel": 25,
+          "trending_tr": 18,
+          "trading_range": 27,
+          "extreme_tr": 4
+        },
+        "reasoning": "①延续当前结构：价格仍在63300到65422之间大幅来回，20均线走平、反复被穿越，近期最可能仍是交易区间或退化的宽幅震荡，故trading_range与broad_channel占比最高；②转换中：K1虽强反包，但只有一根，尚未形成连续强趋势棒突破边界与跟随，若后续出现尖峰级收盘突破并回踩确认，才可能转为常规通道或趋势型区间；③粘性反转风险：当前无明确单边趋势可反转，不侧重。方向边缘极薄，仅给粗粒度分布，不作点预测。",
+        "unpredictable": false,
+        "features_used": [
+          "stage1_diagnosis",
+          "kline_features"
+        ]
+      },
+      "decision_adjustments": [
+        {
+          "from": "限价单",
+          "to": "不下单",
+          "reason": "decision prices: trader equation fails at 50% win rate (risk=365.8, reward=365.8, expectancy≈0); 10.3 must be 否 and order_type=不下单 unless prices are fixed",
+          "check": "trade_metrics",
+          "errors": [
+            "decision prices: trader equation fails at 50% win rate (risk=365.8, reward=365.8, expectancy≈0); 10.3 must be 否 and order_type=不下单 unless prices are fixed"
+          ]
+        }
+      ],
+      "node_coverage": {
+        "9.1": {
+          "program": "是",
+          "program_branch": "",
+          "final": "是",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.2": {
+          "program": "不适用",
+          "program_branch": "",
+          "final": "不适用",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.3": {
+          "program": "否",
+          "program_branch": "",
+          "final": "否",
+          "final_branch": "",
+          "overridden": false
+        },
+        "9.5": {
+          "program": "等待",
+          "program_branch": "",
+          "final": "等待",
+          "final_branch": "",
+          "overridden": false
+        }
+      }
+    },
+    "limitations": "Metrics-only replay without frame-specific tick/freshness checks; not a full Stage2 approval or AI rerun."
+  }
+]

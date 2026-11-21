@@ -5,12 +5,34 @@ import json
 
 from pa_agent.ai.json_validator import Ok
 from pa_agent.ai.stage2_normalizer import (
+    _coerce_decision_when_trade_metrics_fail,
     _normalize_closed_enum,
     _normalize_stage2_bar_analysis_enums,
     _strip_enum_suffix,
     normalize_stage2,
     _normalize_next_bar_prediction,
 )
+
+
+def test_trade_metrics_rejection_rewrites_terminal_and_trace_text() -> None:
+    out = {
+        "decision": {
+            "order_type": "限价单", "order_direction": "做多",
+            "entry_price": 64280.0, "stop_loss_price": 64103.9,
+            "take_profit_price": 64627.2, "take_profit_price_2": 64834.9,
+            "estimated_win_rate": 30, "reasoning": "原方案方程通过",
+        },
+        "decision_trace": [{"node_id": "10.3", "answer": "是", "reason": "方程通过"}],
+        "terminal": {"node_id": "9.0P", "outcome": "trade", "label": "方程通过"},
+    }
+    assert _coerce_decision_when_trade_metrics_fail(out)
+    assert out["decision"]["order_type"] == "不下单"
+    assert out["decision"]["stop_loss_price"] is None
+    assert out["decision_trace"][0]["answer"] == "否"
+    assert "方程通过" not in out["decision_trace"][0]["reason"]
+    assert out["terminal"]["outcome"] == "reject"
+    assert "方程通过" not in out["terminal"]["label"]
+    assert out["decision_adjustments"][0]["original_plan"]["stop_loss_price"] == 64103.9
 from pa_agent.data.base import IndicatorBundle, KlineBar, KlineFrame
 from tests.fixtures.validators import schema_test_validator
 

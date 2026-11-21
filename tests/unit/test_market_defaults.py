@@ -20,9 +20,21 @@ from pa_agent.data.market_defaults import (
 from pa_agent.data.tradingview import TV_EXCHANGE_PRESETS
 
 
-def test_crypto_symbol_migrates_to_gold():
+def test_crypto_symbol_preserved_for_tradingview():
     assert normalize_gold_symbol_for_kind("mt5", "BTCUSD") == GOLD_MT5_SYMBOL
-    assert normalize_gold_symbol_for_kind("tradingview", "BTCUSDT") == GOLD_TV_SYMBOL
+    assert normalize_gold_symbol_for_kind("tradingview", "BTCUSDT") == "BTCUSDT"
+
+
+def test_okx_perpetual_symbols():
+    from pa_agent.data.market_defaults import resolve_tv_fetch_pair
+
+    for symbol in ("BTCUSDT.P", "ETHUSDT.P"):
+        assert normalize_gold_symbol_for_kind("tradingview", symbol) == symbol
+        assert tv_auto_probe_plan(symbol) == [("OKX", symbol)]
+        assert resolve_tv_fetch_pair("", symbol) == ("OKX", symbol)
+        prefixed = f"OKX:{symbol}"
+        assert normalize_gold_symbol_for_kind("tradingview", prefixed) == symbol
+        assert resolve_tv_fetch_pair("OKX", prefixed) == ("OKX", symbol)
 
 
 def test_mt5_suffix_on_tv_becomes_xauusd():

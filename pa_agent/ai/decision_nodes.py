@@ -2841,16 +2841,6 @@ class DecisionNodeEngine:
 
         )
 
-        # Diagnostic only: record which program nodes the AI overrode.
-        try:
-            from pa_agent.ai.node_coverage import build_node_coverage
-
-            out["node_coverage"] = build_node_coverage(program_nodes, final_nodes)
-        except Exception:  # noqa: BLE001
-            pass
-
-
-
         # Step 5: Merge into gate_trace
         # If gate_result is wait/unknown, prepend program nodes so the AI's terminating
         # node (answer=否/等待) remains at the end (validates "末条 answer ∈ {否,等待}").
@@ -2859,6 +2849,36 @@ class DecisionNodeEngine:
             out["gate_trace"] = merge_program_nodes_head(out["gate_trace"], final_nodes)
         else:
             out["gate_trace"] = merge_program_nodes(out["gate_trace"], final_nodes)
+
+        # Diagnostic coverage must compare program nodes with the actual merged
+        # trace.  In particular, AI-primary nodes such as §2.5 may be retained
+        # during merge, so comparing against ``final_nodes`` would report a
+        # stale final value.
+        try:
+            from pa_agent.ai.node_coverage import build_node_coverage
+
+            out["node_coverage"] = build_node_coverage(
+                program_nodes, out.get("gate_trace", [])
+            )
+            mismatches = [
+                node_id
+                for node_id, item in out["node_coverage"].items()
+                if item.get("final") != next(
+                    (
+                        str(n.get("answer", "") or "").strip()
+                        for n in out.get("gate_trace", [])
+                        if isinstance(n, dict)
+                        and str(n.get("node_id", "")).strip() == node_id
+                    ),
+                    "",
+                )
+            ]
+            if mismatches:
+                out.setdefault("consistency_warnings", []).append(
+                    f"node_coverage 与 gate_trace 不一致: {', '.join(mismatches)}"
+                )
+        except Exception:  # noqa: BLE001
+            pass
 
         # Step 6: Sync bar_analysis.always_in from the program-determined §2.4 node.
         # apply_overrides already handles the AI-override path via

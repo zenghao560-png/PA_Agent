@@ -1,6 +1,11 @@
 from __future__ import annotations
 
-from pa_agent.ai.market_features import compute_simple_market_features, render_simple_market_features
+from pa_agent.ai.market_features import (
+    BreakoutEvent,
+    _classify_breakout_quality,
+    compute_simple_market_features,
+    render_simple_market_features,
+)
 from pa_agent.data.base import IndicatorBundle, KlineBar, KlineFrame
 
 
@@ -159,6 +164,12 @@ def test_surviving_breakout_enables_mm_flag() -> None:
     text = render_simple_market_features(features)
     assert "突破质量" in text
     assert "尖峰余波" in text
+
+
+def test_retested_breakout_is_invalid_after_returning_inside_range() -> None:
+    bars = (KlineBar(seq=1, ts_open=1.0, open=99.5, high=100.0, low=98.5, close=99.0, volume=1),)
+    events = (BreakoutEvent(100.0, "range_high", "test", 5, "K5-K4", "retest"),)
+    assert _classify_breakout_quality(bars, events, 102.0, 98.0, 2.0) == ("failed", "close")
 
 
 def test_scale_conflict_and_render_keys() -> None:

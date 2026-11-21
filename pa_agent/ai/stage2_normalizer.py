@@ -963,25 +963,40 @@ def _coerce_decision_when_trade_metrics_fail(
         return False
 
     summary = metric_errors[0]
+    original_plan = {
+        key: decision.get(key)
+        for key in (
+            "order_type", "order_direction", "entry_price", "stop_loss_price",
+            "take_profit_price", "take_profit_price_2", "estimated_win_rate",
+        )
+    }
+    from pa_agent.util.trade_metrics import compute_risk_reward
+
+    original_metrics = compute_risk_reward(
+        decision.get("entry_price"), decision.get("take_profit_price"),
+        decision.get("stop_loss_price"), decision.get("order_direction"),
+    )
     out.setdefault("decision_adjustments", []).append({
         "from": decision.get("order_type"), "to": "不下单",
         "reason": summary, "check": "trade_metrics", "errors": list(metric_errors),
+        "original_plan": original_plan, "original_metrics": original_metrics,
     })
     _clear_decision_to_no_order(decision, reason=summary)
-    _set_trace_node_answer(
-        out.get("decision_trace"),
-        "10.3",
-        "否",
-        reason_suffix=f"（程序按 decision 三价校验未通过：{summary}，已改为不下单。）",
-    )
+    trace = out.get("decision_trace")
+    if isinstance(trace, list):
+        for item in trace:
+            if isinstance(item, dict) and str(item.get("node_id", "")).strip() == "10.3":
+                out["decision_adjustments"][-1]["original_10_3_reason"] = item.get("reason")
+                item["answer"] = "否"
+                item["reason"] = f"程序按原始结构三价校验未通过：{summary}。本轮不下单。"
+                item["skipped"] = False
+                break
     terminal = out.get("terminal")
     if isinstance(terminal, dict):
+        out["decision_adjustments"][-1]["original_terminal"] = dict(terminal)
         terminal["outcome"] = "reject"
         terminal["node_id"] = "10.3"
-        terminal.setdefault(
-            "label",
-            "交易者方程/盈亏比未达标，不下单",
-        )
+        terminal["label"] = f"原始方案交易指标未通过：{summary}；不下单"
     logger.debug("Coerced decision to 不下单 (trade metrics: %s)", summary)
     return True
 
@@ -1619,11 +1634,6 @@ def normalize_stage2(
             "breakout entry_price adjusted to basis extreme ± 1 tick (basis=%s)",
             decision.get("entry_basis_bar"),
         )
-    if isinstance(decision, dict) and out.get("analysis_contract") != "glm_flash_lite":
-        from pa_agent.util.trade_metrics import adjust_decision_stop_for_tp1_rr_cap
-
-        if adjust_decision_stop_for_tp1_rr_cap(decision, kline_frame=kline_frame):
-            logger.debug("stop_loss widened to bring TP1 RR within program cap")
     # Planned-limit trace fixes must run BEFORE the trade-metrics coercion:
     # coercion replaces order_type with 不下单, which makes is_planned_limit_order()
     # return False and silently disables the §9.0 / §9.0P upgrades below.

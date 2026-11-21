@@ -473,6 +473,11 @@ class MainWindow(QMainWindow):
 
         # Display labels with category hints (crypto exchanges get no suffix)
         _EXCHANGE_LABELS: dict[str, str] = {
+            "BINANCE": "BINANCE（加密货币）",
+            "BITSTAMP": "BITSTAMP（加密货币）",
+            "COINBASE": "COINBASE（加密货币）",
+            "BYBIT": "BYBIT（加密货币）",
+            "OKX": "OKX（加密货币）",
             "SSE":       "SSE（A股）",
             "SZSE":      "SZSE（A股）",
             "HKEX":      "HKEX（港股）",
@@ -1138,7 +1143,7 @@ class MainWindow(QMainWindow):
         self._symbol_label.setText("合约:" if is_futures else "品种:")
         if kind == "tradingview":
             line.setPlaceholderText(
-                "A股 6 位 / 港股 1810 / 名称 小米集团；交易所可自动；或 XAUUSD+OANDA"
+                "OKX 永续：BTCUSDT.P / ETHUSDT.P；A股 6 位 / 港股 1810"
             )
         elif kind == "eastmoney_futures":
             line.setPlaceholderText("选择左侧品种后在此选合约, 或直接输入如 AO2509")

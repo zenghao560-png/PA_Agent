@@ -92,7 +92,8 @@ def format_estimated_win_rate_reasoning(decision: dict[str, Any]) -> str:
 
 # Lower cap: reward must be at least equal to risk (1:1) for any stance.
 MIN_RISK_REWARD_RATIO = 1.0
-# Upper cap on TP1 reward:risk — enforced by widening stop, not by shrinking TP1.
+# Legacy RR cap helper retained for compatibility; live validation does not
+# apply it because the structure-defined stop must remain unchanged.
 MAX_TP1_RISK_REWARD_RATIO = 1.0
 
 
@@ -103,8 +104,8 @@ def min_risk_reward_ratio(decision_stance: str | None = None) -> float:
 
 
 def max_risk_reward_ratio() -> float | None:
-    """Maximum TP1 reward:risk after program stop adjustment."""
-    return MAX_TP1_RISK_REWARD_RATIO
+    """No live TP1 RR upper bound; structure-defined stops are preserved."""
+    return None
 
 
 def widen_stop_for_tp1_rr_cap(
@@ -426,7 +427,7 @@ def validate_order_trade_metrics(
     decision_stance: str | None = None,
     kline_frame: Any = None,
     bar_analysis: dict[str, Any] | None = None,
-    apply_rr_cap_adjustment: bool = True,
+    apply_rr_cap_adjustment: bool = False,
     allow_single_target: bool = False,
 ) -> list[str]:
     """Validate entry/TP/SL geometry, RR floor, and trader equation for live orders."""
@@ -434,8 +435,8 @@ def validate_order_trade_metrics(
     if order_type not in ("限价单", "突破单", "市价单"):
         return []
 
-    if apply_rr_cap_adjustment:
-        adjust_decision_stop_for_tp1_rr_cap(decision, kline_frame=kline_frame)
+    # Structure-defined stops are immutable during validation.  The legacy
+    # argument remains for callers, but must not change the submitted prices.
 
     entry = decision.get("entry_price")
     tp = decision.get("take_profit_price")
@@ -459,14 +460,6 @@ def validate_order_trade_metrics(
             f"decision prices: risk_reward {rr['ratio_text']} is below minimum "
             f"{min_rr:.2f}:1 for this stance; adjust take_profit/stop_loss or set "
             "order_type=不下单 with 10.3=否"
-        )
-
-    max_rr = max_risk_reward_ratio()
-    if max_rr is not None and ratio > max_rr + 1e-9:
-        errors.append(
-            f"decision prices: risk_reward {rr['ratio_text']} exceeds maximum "
-            f"{max_rr:.2f}:1 for TP1 after stop adjustment; set order_type=不下单 "
-            "with 10.3=否"
         )
 
     win_rate = _parse_win_rate(decision.get("estimated_win_rate"))

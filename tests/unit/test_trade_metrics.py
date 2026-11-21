@@ -28,7 +28,7 @@ def test_compute_risk_reward_short():
 def test_rr_bounds_all_stances_share_one_floor() -> None:
     for stance in ("conservative", "balanced", "aggressive", "extreme_aggressive", None):
         assert min_risk_reward_ratio(stance) == 1.0
-    assert max_risk_reward_ratio() == 1.0
+    assert max_risk_reward_ratio() is None
 
 
 def test_widen_stop_for_tp1_rr_cap_long():

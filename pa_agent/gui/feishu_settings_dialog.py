@@ -30,6 +30,7 @@ from PyQt6.QtWidgets import (
 
 from pa_agent.config.paths import SETTINGS_JSON_PATH
 from pa_agent.config.settings import Settings, save_settings
+from pa_agent.notify.http_proxy import feishu_post
 
 logger = logging.getLogger(__name__)
 
@@ -267,7 +268,7 @@ class FeishuSettingsDialog(QDialog):
             payload["sign"] = base64.b64encode(hmac_code).decode("utf-8")
 
         try:
-            resp = requests.post(
+            resp = feishu_post(
                 webhook_url,
                 json=payload,
                 headers={"Content-Type": "application/json"},

@@ -161,6 +161,17 @@ def test_high_rr_allowed_when_trader_equation_passes() -> None:
     assert rr["ratio"] == 2.0
 
 
+def test_1500_structural_stop_is_not_widened() -> None:
+    decision = {
+        "order_type": "限价单", "order_direction": "做多",
+        "entry_price": 64280.0, "stop_loss_price": 64103.9,
+        "take_profit_price": 64627.2, "take_profit_price_2": 64834.9,
+        "estimated_win_rate": 48,
+    }
+    assert validate_order_trade_metrics(decision) == []
+    assert decision["stop_loss_price"] == 64103.9
+
+
 def test_stage2_validator_coerces_bad_rr_to_no_order() -> None:
     obj = {
         "decision": {

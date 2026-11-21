@@ -32,6 +32,7 @@ import time
 import threading
 from pathlib import Path
 from typing import Any, TYPE_CHECKING
+from pa_agent.notify.http_proxy import feishu_post
 
 if TYPE_CHECKING:
     from pa_agent.config.settings import Settings
@@ -65,7 +66,7 @@ class _TokenCache:
         try:
             import requests  # type: ignore[import]
 
-            resp = requests.post(
+            resp = feishu_post(
                 _TOKEN_URL,
                 json={"app_id": app_id, "app_secret": app_secret},
                 headers={"Content-Type": "application/json"},
@@ -126,7 +127,7 @@ def _upload_image(image_path: Path, app_id: str, app_secret: str) -> str | None:
         import requests  # type: ignore[import]
 
         with open(image_path, "rb") as f:
-            resp = requests.post(
+            resp = feishu_post(
                 _IMAGE_UPLOAD_URL,
                 headers={"Authorization": f"Bearer {token}"},
                 files={"image": (image_path.name, f, "image/png")},
@@ -378,7 +379,7 @@ def send_order_signal(
 
     # ── 发送 ─────────────────────────────────────────────────────────────────
     try:
-        resp = requests.post(
+        resp = feishu_post(
             webhook_url,
             json=payload,
             headers={"Content-Type": "application/json"},

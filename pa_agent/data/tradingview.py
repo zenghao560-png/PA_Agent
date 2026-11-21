@@ -57,6 +57,11 @@ _TF_MAP: dict[str, str] = {
 
 # Forex / spot gold and China A-share (tvDatafeed exchange ids)
 TV_EXCHANGE_PRESETS: tuple[str, ...] = (
+    "BINANCE",
+    "BITSTAMP",
+    "COINBASE",
+    "BYBIT",
+    "OKX",
     "OANDA",
     "PEPPERSTONE",
     "FOREXCOM",
@@ -165,6 +170,8 @@ class TradingViewSource(DataSource):
 
     def list_symbols(self) -> list[str]:
         return [
+            "BTCUSDT.P",
+            "ETHUSDT.P",
             "XAUUSD",
             "GOLD",
             "600519",

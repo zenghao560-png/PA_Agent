@@ -488,6 +488,12 @@ def _classify_breakout_quality(
     if latest.event == "failed":
         return "failed", attempt
     if latest.event == "test":
+        # A historical successful retest is no longer active once the latest
+        # close has returned to the range side of that breakout level.
+        if latest.level_kind == "range_high" and close0 <= latest.level_price:
+            return "failed", attempt
+        if latest.level_kind == "range_low" and close0 >= latest.level_price:
+            return "failed", attempt
         return "surviving", attempt
     if latest.event == "breakout":
         # Surviving if enough bars since breakout without a later failed on same level

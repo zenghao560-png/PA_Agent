@@ -107,6 +107,10 @@ def normalize_gold_symbol_for_kind(kind: str, symbol: str) -> str:
             return A_SHARE_DEFAULT_SYMBOL
         return code
     if kind == "tradingview":
+        if sym.upper() in ("OKX:BTCUSDT.P", "OKX:ETHUSDT.P"):
+            return sym.split(":", 1)[1].upper()
+        if is_likely_crypto_symbol(sym):
+            return sym.upper()
         code = normalize_ashare_tv_code(sym)
         if _is_ashare_tv_code(code):
             return code
@@ -232,6 +236,9 @@ def tv_forex_auto_probe_plan(symbol: str) -> list[tuple[str, str]]:
 
 def tv_auto_probe_plan(symbol: str) -> list[tuple[str, str]]:
     """Full auto-probe plan: equity venues first, else all forex presets in the UI list."""
+    upper = (symbol or "").strip().upper()
+    if upper in ("BTCUSDT.P", "ETHUSDT.P"):
+        return [("OKX", upper)]
     equity = equity_tv_auto_probe_plan(symbol)
     if equity:
         return equity
@@ -373,6 +380,14 @@ def resolve_tv_fetch_pair(exchange: str, symbol: str) -> tuple[str, str]:
 
     ex = (exchange or "").strip().upper()
     sym = (symbol or "").strip()
+    if ":" in sym:
+        symbol_exchange, symbol_code = sym.split(":", 1)
+        if symbol_exchange.strip().upper() == "OKX" and symbol_code.strip().upper() in (
+            "BTCUSDT.P", "ETHUSDT.P"
+        ):
+            return "OKX", symbol_code.strip().upper()
+    if sym.upper() in ("BTCUSDT.P", "ETHUSDT.P"):
+        return "OKX", sym.upper()
     if is_tv_exchange_auto(ex):
         return "", sym
     if is_tv_name_input(sym):
