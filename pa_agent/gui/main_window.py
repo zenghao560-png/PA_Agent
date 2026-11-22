@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 import sys
+import threading
 from typing import Any
 
 from PyQt6.QtCore import QThread, QTimer, pyqtSignal, QObject
@@ -254,6 +255,8 @@ class _AnalysisWorker(QThread):
 class MainWindow(QMainWindow):
     """Top-level workbench: chart + AI sidebar (analysis / raw / decision)."""
 
+    _replay_ready = pyqtSignal()
+
     def __init__(self, ctx: AppContext, parent: QWidget | None = None) -> None:
         super().__init__(parent)
         self.setWindowTitle(
@@ -331,6 +334,10 @@ class MainWindow(QMainWindow):
         self._future_trend_panel = self._ai_sidebar.future_trend
         self._decision_tree_panel = self._ai_sidebar.decision_tree
         self._decision_flow_viz_panel = self._ai_sidebar.decision_flow_viz
+        self._replay_panel = self._ai_sidebar.replay_panel
+        self._replay_lock = threading.Lock()
+        self._replay_running = False
+        self._replay_ready.connect(self._refresh_replay_panel)
 
         # Auto demo: when flow playback ends, return to stream tab.
         try:
@@ -1890,6 +1897,8 @@ class MainWindow(QMainWindow):
         """
         if bars:
             self._last_frame_ready_bars = list(bars)
+            # Replay is deliberately scheduled off the UI/refresh thread.
+            self._schedule_replay(list(bars))
             self._update_live_price_label(bars)
             from pa_agent.data.bar_close_wait import current_forming_ts
 
@@ -3739,6 +3748,39 @@ class MainWindow(QMainWindow):
                 )
             except Exception:  # noqa: BLE001
                 pass
+
+    def _schedule_replay(self, bars: list[Any]) -> None:
+        """Run optional replay off the realtime/UI path.
+
+        The snapshot is copied before starting. A slow replay can therefore
+        never delay chart painting, bar-close handling, API calls, or Feishu.
+        """
+        symbol = self._symbol_combo.currentText().strip() if hasattr(self, "_symbol_combo") else ""
+        timeframe = self._tf_combo.currentText().strip() if hasattr(self, "_tf_combo") else ""
+        if not symbol or not timeframe or not self._replay_lock.acquire(blocking=False):
+            return
+        if self._replay_running:
+            self._replay_lock.release()
+            return
+        self._replay_running = True
+
+        def run() -> None:
+            try:
+                from pa_agent.replay.repository import replay_saved_records
+                replay_saved_records(list(bars), symbol=symbol, timeframe=timeframe)
+                self._replay_ready.emit()
+            except Exception as exc:  # noqa: BLE001
+                logger.debug("Decision replay update skipped: %s", exc)
+            finally:
+                self._replay_running = False
+                self._replay_lock.release()
+
+        threading.Thread(target=run, name="pa-replay", daemon=True).start()
+
+    def _refresh_replay_panel(self) -> None:
+        panel = getattr(self, "_replay_panel", None)
+        if panel is not None and self._ui_is_alive():
+            panel.refresh()
 
     def _on_record_ready(self, record: Any) -> None:
         """Push the full AnalysisRecord to the conversation and debug tabs."""

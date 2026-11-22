@@ -12,6 +12,7 @@ from pa_agent.gui.decision_flow_viz import DecisionFlowVizPanel
 from pa_agent.gui.decision_tree_panel import DecisionTreePanel
 from pa_agent.gui.future_trend_panel import FutureTrendPanel
 from pa_agent.gui.prompt_files_panel import PromptFilesPanel
+from pa_agent.gui.replay_panel import ReplayPanel
 
 if TYPE_CHECKING:
     from pa_agent.config.settings import Settings
@@ -36,6 +37,8 @@ class AISidebar(QWidget):
         self.decision_tree = DecisionTreePanel()
         self.decision_flow_viz = DecisionFlowVizPanel()
         self.future_trend = FutureTrendPanel()
+        self.replay = ReplayPanel()
+        self.replay_panel = self.replay
 
         self._tabs.addTab(self.stream, "实时")
         self._tabs.addTab(self.decision_tree, "决策树")
@@ -44,6 +47,7 @@ class AISidebar(QWidget):
         self._tabs.addTab(self.future_trend, "未来走势预期")
         self._tabs.addTab(self.debug, "原始")
         self._tabs.addTab(self.prompt_files, "调试")
+        self._tabs.addTab(self.replay, "策略回放")
 
         if settings is not None:
             self.bind_settings(settings)
@@ -61,6 +65,7 @@ class AISidebar(QWidget):
     TAB_FUTURE_TREND = 4   # new
     TAB_RAW = 5            # was 4
     TAB_DEBUG = 6          # was 5
+    TAB_REPLAY = 7
 
     def focus_stream(self) -> None:
         """Switch to the live AI output tab (index 0)."""
