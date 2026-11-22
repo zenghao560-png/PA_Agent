@@ -901,7 +901,12 @@ class TwoStageOrchestrator:
                     "exception": None,
                 }
             )
-            self._pending_writer.save_full(record)
+            record_path = self._pending_writer.save_full(record)
+            try:
+                from pa_agent.audit.event_worker import submit_event_audit
+                submit_event_audit(record, source_path=record_path)
+            except Exception:  # audit is strictly best effort
+                logger.debug("event audit submission skipped", exc_info=True)
             on_event(OrchestratorEvent.RecordSaved)
             return record
 
@@ -1333,7 +1338,12 @@ class TwoStageOrchestrator:
         )
 
         # ── Step 22: Persist full record ──────────────────────────────────────
-        self._pending_writer.save_full(record)
+        record_path = self._pending_writer.save_full(record)
+        try:
+            from pa_agent.audit.event_worker import submit_event_audit
+            submit_event_audit(record, source_path=record_path)
+        except Exception:  # audit is strictly best effort
+            logger.debug("event audit submission skipped", exc_info=True)
 
         # ── Step 23: Record saved event ───────────────────────────────────────
         on_event(OrchestratorEvent.RecordSaved)
